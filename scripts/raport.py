@@ -17,7 +17,7 @@ def aanmakenrapport():
         f.write('### Uitvoering\n')
         f.write('1.1\n')
         f.write(' - tijdens dit deel werd de data gescraped\n')
-        f.write('[bash script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/webscraper.sh)')
+        f.write('[bash script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/webscraper.sh)\n')
         f.write('\n1.2\n')
         f.write(' - tijdens dit deel werd de data getransformeerd\n')
         f.write(' - dit genereerd een SC2001 warning die niet valt op te lossen omdat de sed code te complex is zie [hier](https://www.shellcheck.net/wiki/SC2001)\n')

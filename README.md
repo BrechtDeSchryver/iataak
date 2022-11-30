@@ -12,6 +12,7 @@ In dit rapport wordt de uitvoering van de IATAAK beschreven. voor deze taak maak
 1.1
  - tijdens dit deel werd de data gescraped
 [bash script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/webscraper.sh)
+
 1.2
  - tijdens dit deel werd de data getransformeerd
  - dit genereerd een SC2001 warning die niet valt op te lossen omdat de sed code te complex is zie [hier](https://www.shellcheck.net/wiki/SC2001)
