@@ -9,10 +9,10 @@
 In dit rapport wordt de uitvoering van de IATAAK beschreven. voor deze taak maakte ik gebruik van het dataportaal van stad gent. Ik nam een kijkje naar de data van real time beztting van parkeergarages in Gent
 ### Uitvoering
 1.1
-[a link](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/webscraper.sh)
+tijdens dit deel werd de data gescraped[bash script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/webscraper.sh)
 1.2
-[a link](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/transform.sh)
+tijdens dit deel werd de data getransformeerd[bash script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/transform.sh)
 1.3
-[a link](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/raport.py)
+tijdens dit deel werd de data gevisualiseerd[python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/raport.py)
 1.4
-[a link](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/report.py)
+tijdens dit deel werd de data mooi opgemaakt[python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/report.py)
