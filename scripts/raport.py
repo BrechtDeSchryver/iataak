@@ -1,4 +1,5 @@
 import os
+import lorem
 #deze file zal de README.md aanpassen zodat een soort van rapport gegenereerd wordt
 READMELOC = "C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/README.md"
 IMAGELOC= "C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage"
@@ -32,6 +33,7 @@ def aanmakenrapport():
         f.write('### Resultaten\n')
         for file in os.listdir(IMAGELOC):
             f.write("## grafiek van " + file + "\n")
+            f.write(lorem.paragraph()+"\n")
             f.write('![image]('"https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/"+file+')\n')
 def main():
     aanmakenrapport()
