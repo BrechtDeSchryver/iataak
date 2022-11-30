@@ -1,0 +1,3 @@
+TIMESTAMP = 20221130-161403 
+DATADIR = /home/osboxes/Data/data-20221130-161403.json
+malformed JSON string, neither array, object, number, string or atom, at character offset 0 (before "(end of string)") at /usr/bin/json_pp line 51.

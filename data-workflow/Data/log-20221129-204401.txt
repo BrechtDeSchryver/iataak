@@ -1,0 +1,2 @@
+TIMESTAMP = 20221129-204401\n
+DATADIR = /home/osboxes/Data/data-20221129-204401.json\n
