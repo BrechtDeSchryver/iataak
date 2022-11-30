@@ -40,6 +40,7 @@ def plot_gemiddeldebezetting(dataset):
     plt.ylabel('gemiddelde bezetting')
     plt.bar(x, y)
     plt.title('gemiddelde bezetting per parking')
+    plt.savefig(gitloc+'/csvimage/gemiddelde.csv.png')
 def plot_data(df,name):
     converted_dates = []
     for time in df['timestamp']:

@@ -5,9 +5,11 @@ SCRIPTDIR="/home/osboxes/Desktop/git/iataak/scripts"
 createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt"
     touch "$tempfile"
-    printf "*/5 * * * * $SCRIPTDIR/automated.sh\n" >> "$tempfile"
-    printf "0 */1 * * * /bin/python3.8 $SCRIPTDIR/analyse.py\n" >> "$tempfile"
-    printf "0 */1 * * * /bin/python3.8 $SCRIPTDIR/raport.py\n" >> "$tempfile"
+    {
+    printf "*/5 * * * * %s/automated.sh\n" "$SCRIPTDIR"
+    printf "0 */1 * * * /bin/python3.8 %s/analyse.py\n" "$SCRIPTDIR"
+    printf "0 */1 * * * /bin/python3.8 %s/raport.py\n" "$SCRIPTDIR" 
+    } >> "$tempfile"
     crontab "$tempfile"
     rm "$tempfile"
 }
