@@ -1,3 +1,4 @@
+#author=Brecht De Schryver
 import matplotlib.pyplot as plt
 import matplotlib.dates as md
 import datetime as dt

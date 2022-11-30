@@ -1,3 +1,4 @@
+#author=Brecht De Schryver
 import os
 import lorem
 from git import Repo

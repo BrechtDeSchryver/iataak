@@ -1,9 +1,9 @@
 #!/bin/bash
+#author=Brecht De Schryver
 
 # Dit script neemt elk data file van een directory en zet deze om naar een csv file met de nuttige data
 DIRECTORY="$HOME/Data"
 FILES=$(find "$DIRECTORY" -name 'data*');
-
 newcsv(){
     name=$1;
     if [[ ! -d "$DIRECTORY/csv" ]]; then
@@ -11,7 +11,7 @@ newcsv(){
     fi
     csv="$DIRECTORY/csv/$name.csv";
     touch "$csv";
-    printf "availablecapacity;freeparking;isopennow;occupation;totalcapacity;timestamp">>"$csv";
+    printf "availablecapacity;freeparking;isopennow;occupation;totalcapacity;timestamp\n">>"$csv";
 }
 remewcsv(){
     rm -rf "$DIRECTORY/csv";
@@ -22,8 +22,8 @@ init(){
     remewcsv;
     for file in $FILES 
     do
-        TIMESTAMP=$(tr -dc '0-9' <"$file");
-        parkings=$(jq .records[].fields.name <"$file" | perl -pe 's{("[^"]+")}{($x=$1)=~s/ /_/g;$x}ge');
+        TIMESTAMP=$(echo "$file" | tr -dc '0-9');
+        parkings=$(jq .records[].fields.name "$file" | perl -pe 's{("[^"]+")}{($x=$1)=~s/ /_/g;$x}ge');
         for parking in $parkings
         do  
             newparking=$(echo "$parking" | sed 's/"//g');

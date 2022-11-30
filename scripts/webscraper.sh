@@ -1,4 +1,5 @@
 #!/bin/bash
+#author=Brecht De Schryver
 
 # This script is used to scrape api data from the data.stad.gent api
 # and store it in a json file.
