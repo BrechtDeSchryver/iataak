@@ -1,12 +1,13 @@
 #!/bin/bash
 #author=Brecht De Schryver
 
-SCRIPTSDIR=~/Desktop/scripts
+SCRIPTDIR="/home/osboxes/Desktop/git/iataak/scripts"
 createcrontab(){
-    tempfile=$SCRIPTSDIR/tempcron.txt
+    tempfile="$SCRIPTDIR/tempcron.txt"
     touch "$tempfile"
-    printf "*/5 * * * * ~/Desktop/scripts/automated.sh\n" >> "$tempfile"
-    printf "* */1 * * * ~/Desktop/scripts/analyse.py\n" >> "$tempfile"
+    printf "*/5 * * * * $SCRIPTDIR/automated.sh\n" >> "$tempfile"
+    printf "*/10 * * * * /bin/python3.8 $SCRIPTDIR/analyse.py\n" >> "$tempfile"
+    printf "*/10 * * * * /bin/python3.8 $SCRIPTDIR/raport.py\n" >> "$tempfile"
     crontab "$tempfile"
     rm "$tempfile"
 }

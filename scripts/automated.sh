@@ -1,7 +1,6 @@
 #!/bin/bash
 #author=Brecht De Schryver
 DIRECTORY="$HOME/Data"
-FILES=$(find "$DIRECTORY" -name 'data*');
 URL="https://data.stad.gent/api/records/1.0/search/?dataset=bezetting-parkeergarages-real-time&q=&rows=20&facet=name&facet=lastupdate&facet=description&facet=categorie"
 newcsv(){
     name=$1;
