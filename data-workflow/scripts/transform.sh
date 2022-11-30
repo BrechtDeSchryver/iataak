@@ -2,7 +2,7 @@
 #author=Brecht De Schryver
 
 # Dit script neemt elk data file van een directory en zet deze om naar een csv file met de nuttige data
-DIRECTORY="$HOME/Data"
+DIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data"
 FILES=$(find "$DIRECTORY" -name 'data*');
 newcsv(){
     name=$1;
