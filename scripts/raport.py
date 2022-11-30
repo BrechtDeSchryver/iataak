@@ -43,7 +43,9 @@ def aanmakenrapport():
             f.write("## tabel van " + str(file.split(".",1)[0]) + "\n")
             f.write(lorem.paragraph()+"\n")
             with open(os.path.join(TABELSLOC, file)) as f2:
+                f.write('\n')
                 f.write(f2.read())
+                f.write('\n')
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
