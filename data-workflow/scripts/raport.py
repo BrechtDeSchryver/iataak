@@ -4,7 +4,8 @@ import lorem
 from git import Repo
 import time
 #deze file zal de README.md aanpassen zodat een soort van rapport gegenereerd wordt
-GITLOC = "/home/osboxes/Desktop/git/iataak"
+GITFILELOC="/home/osboxes/Desktop/git/iataak"
+GITLOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
 #'C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak'
 READMELOC = GITLOC + "/README.md"
 IMAGELOC= GITLOC + "/csvimage"
@@ -58,7 +59,7 @@ def aanmakenrapport():
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
 def gitpush():
-    repo = Repo(GITLOC)
+    repo = Repo(GITFILELOC)
     repo.git.add(update=True)
     repo.index.commit('automated commit of rapport at time=' + str(time.strftime("%d/%m/%Y")))
     origin = repo.remote(name='origin')

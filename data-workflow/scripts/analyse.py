@@ -10,7 +10,7 @@ import sys
 from pandas.plotting import table
 import tabulate
 csv_DIR="/home/osboxes/Data/csv"
-gitloc="/home/osboxes/Desktop/git/iataak"
+gitloc="/home/osboxes/Desktop/git/iataak/data-workflow"
 #"C:/csv"
 #"C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak"
 # Read the data

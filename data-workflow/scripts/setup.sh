@@ -1,7 +1,7 @@
 #!/bin/bash
 #author=Brecht De Schryver
 
-SCRIPTDIR="/home/osboxes/Desktop/git/iataak/scripts"
+SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts"
 createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt"
     touch "$tempfile"
