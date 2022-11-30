@@ -6,8 +6,8 @@ createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt"
     touch "$tempfile"
     printf "*/5 * * * * $SCRIPTDIR/automated.sh\n" >> "$tempfile"
-    printf "* */1 * * * /bin/python3.8 $SCRIPTDIR/analyse.py\n" >> "$tempfile"
-    printf "* */1 * * * /bin/python3.8 $SCRIPTDIR/raport.py\n" >> "$tempfile"
+    printf "0 */1 * * * /bin/python3.8 $SCRIPTDIR/analyse.py\n" >> "$tempfile"
+    printf "0 */1 * * * /bin/python3.8 $SCRIPTDIR/raport.py\n" >> "$tempfile"
     crontab "$tempfile"
     rm "$tempfile"
 }
