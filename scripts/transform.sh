@@ -21,7 +21,7 @@ newtotaalcsv(){
     fi
     csv="$DIRECTORY/csv/totaal/$name.csv";
     touch "$csv";
-    printf "timestamp;occupation\n">>"$csv";
+    printf "occupation;timestamp\n">>"$csv";
 }
 remewcsv(){
     rm -rf "$DIRECTORY/csv";
@@ -65,7 +65,7 @@ init(){
             IFS='}';
         done
         IFS=$OIFS;
-        echo "$TIMESTAMP;$TOTAALOCCUPATION">>"$DIRECTORY/csv/totaal/totaal.csv";
+        echo "$TOTAALOCCUPATION;$TIMESTAMP">>"$DIRECTORY/csv/totaal/totaal.csv";
     done
 }
 init;

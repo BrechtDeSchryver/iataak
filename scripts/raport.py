@@ -6,6 +6,7 @@ import time
 #deze file zal de README.md aanpassen zodat een soort van rapport gegenereerd wordt
 READMELOC = "C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/README.md"
 IMAGELOC= "C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage"
+TABELSLOC= "C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels"
 def aanmakenrapport():
     with open(READMELOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
@@ -38,6 +39,10 @@ def aanmakenrapport():
             f.write("## grafiek van " + str(file.split(".",2)[0]) + "\n")
             f.write(lorem.paragraph()+"\n")
             f.write('![image]('"https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/"+file+')\n')
+        for file in os.listdir(TABELSLOC):
+            f.write("## tabel van " + str(file.split(".",1)[0]) + "\n")
+            f.write(lorem.paragraph()+"\n")
+            f.write(os.path.join(TABELSLOC, file))
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
