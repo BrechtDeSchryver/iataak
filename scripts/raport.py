@@ -29,7 +29,7 @@ def aanmakenrapport():
         f.write(' - dit genereerd een SC2001 warning die niet valt op te lossen omdat de sed code te complex is zie [hier](https://www.shellcheck.net/wiki/SC2001)\n')
         f.write('\n1.3\n')
         f.write(' - tijdens dit deel werd de data gevisualiseerd\n')
-        f.write('[python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/raport.py)\n')
+        f.write('[python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/analyse.py)\n')
         f.write('\n1.4\n')
         f.write(' - tijdens dit deel werd de data mooi opgemaakt\n')
         f.write('[python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/report.py)\n')

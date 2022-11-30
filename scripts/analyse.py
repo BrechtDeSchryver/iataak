@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import os
 import sys
+from pandas.plotting import table
 import tabulate
 csv_DIR="C:/csv"
 # Read the data
@@ -18,6 +19,17 @@ def read_data(csv_DIR):
             df.sort_values(by=['timestamp'], inplace=True)
             dataset[file]=df
     return dataset
+def plot_gemiddeldebezetting(dataset):
+    x=[]
+    y=[]
+    for name,df in dataset.items():
+        x.append(name)
+        y.append(df['occupation'].mean())
+    plt.xlabel('name')
+    plt.ylabel('gemiddelde bezetting')
+    plt.bar(x, y)
+    plt.title('gemiddelde bezetting per parking')
+    plt.show()
 def plot_data(df,name):
     print(df)
     converted_dates = []
@@ -30,6 +42,7 @@ def plot_data(df,name):
     xfmt=md.DateFormatter('%Y-%m-%d %H:%M:%S')
     ax=plt.gca()
     ax.xaxis.set_major_formatter(xfmt)
+    ax.xaxis_date()
     plt.xlabel('timestamp')
     plt.ylabel('amount of cars')
     plt.plot(x, y, label="occupation")
@@ -37,16 +50,42 @@ def plot_data(df,name):
     plt.title(name)
     plt.savefig('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage/' + name + '.png')
     plt.show()
-def plot_table(dataset,name):
+def plot_totalebeztting(dataset):
+    print("work")
+def plot_table_totaal(dataset):
     data=[]
-    for item in dataset:
-        data.append(name,dataset[item]['totalcapacity'].avg())
+    for name,item in dataset.items():
+        data.append([name,item['totalcapacity'].iloc[0]])
     col_names = ['name', 'totalcapacity']
-    print(tabulate.tabulate(data, headers=col_names))
+    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/totaal.txt', 'w') as f:
+        f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+    print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
+def plot_table_betalenparking(dataset):
+    data=[]
+    for name,item in dataset.items():
+        data.append([name,item['freeparking'].iloc[0]])
+    col_names = ['name', 'freeparking']
+    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/betalen.txt', 'w') as f:
+        f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+    print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
+def plot_gemiddeldeopeningstijd(dataset):
+    data=[]
+    for name,item in dataset.items():
+        data.append([name,item['isopennow'].mean()])
+    col_names = ['name', 'percentage open'] 
+    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
+        f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+    print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def main():
     dataset = read_data(csv_DIR)
+    totaal = read_data_totaal(csv_DIR)
     for name,df in dataset.items():
-        plot_data(df,name)
-    plot_table(dataset,name)
+        print("stfu")
+        #plot_data(df,name)
+    plot_totalebeztting(dataset)
+    #plot_gemiddeldeopeningstijd(dataset)
+    #plot_table_totaal(dataset)
+    #plot_table_betalenparking(dataset)
+    #plot_gemiddeldebezetting(dataset)
 if __name__ == '__main__':
     main()
