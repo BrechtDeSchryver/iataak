@@ -1,6 +1,7 @@
 ## Rapport van de IATAAK
 ### Auteurs:
- - [Brecht De Schryver]### Inhoudsopgave:
+ - [Brecht De Schryver]
+### Inhoudsopgave:
  - [Inleiding](#inleiding)
  - [Uitvoering](#uitvoering)
  - [Resultaten](#resultaten)
@@ -15,9 +16,11 @@ In dit rapport wordt de uitvoering van de IATAAK beschreven. voor deze taak maak
  - tijdens dit deel werd de data getransformeerd
  - dit genereerd een SC2001 warning die niet valt op te lossen omdat de sed code te complex is zie [hier](https://www.shellcheck.net/wiki/SC2001)
 [bash script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/transform.sh)
+
 1.3
  - tijdens dit deel werd de data gevisualiseerd
 [python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/raport.py)
+
 1.4
  - tijdens dit deel werd de data mooi opgemaakt
 [python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/report.py)
