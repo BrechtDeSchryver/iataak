@@ -37,6 +37,12 @@ def aanmakenrapport():
         f.write(' - tijdens dit deel werd de data mooi opgemaakt\n')
         f.write('[python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/report.py)\n')
         f.write('### Resultaten\n')
+        f.write('\n1.5\n')
+        f.write(' - tijdens dit deel werd het gehele process geautomatiseerd\n')
+        f.write('gegeven dat je alle scripts op de juiste plaats hebt staan en in de code deze gelinkt hebt + je toegang hebt tot de github repo kan je dit script uitvoeren\n')
+        f.write('dit vult elke 5 min de csv files aan en elk uur maakt hij nieuwe raporten die hij dan commit op github\n')
+        f.write('[bash script setup](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/setup.sh)\n')
+        f.write('[bash script automatic run](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/automated.sh)\n')
         for file in os.listdir(IMAGELOC):
             f.write("## grafiek van " + str(file.split(".",2)[0]) + "\n")
             f.write(lorem.paragraph()+"\n")
