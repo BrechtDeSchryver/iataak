@@ -31,7 +31,7 @@ def aanmakenrapport():
         f.write('### Resultaten\n')
         for file in os.listdir(IMAGELOC):
             f.write("##grafiek van " + file + "\n")
-            f.write('![image]('+IMAGELOC+'/'+file+')\n')
+            f.write('![image]('"https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/"+file+')\n')
 def main():
     aanmakenrapport()
 if __name__ == '__main__':
