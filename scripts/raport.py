@@ -1,5 +1,7 @@
 import os
 import lorem
+from git import Repo
+import time
 #deze file zal de README.md aanpassen zodat een soort van rapport gegenereerd wordt
 READMELOC = "C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/README.md"
 IMAGELOC= "C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage"
@@ -35,7 +37,17 @@ def aanmakenrapport():
             f.write("## grafiek van " + str(file.split(".",2)[0]) + "\n")
             f.write(lorem.paragraph()+"\n")
             f.write('![image]('"https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/"+file+')\n')
+        f.write('### Conclusie\n')
+        f.write(lorem.paragraph()+"\n")
+        f.write("Goodbye now")
+def gitpush():
+    repo = Repo('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak')
+    repo.git.add(update=True)
+    repo.index.commit('automated commit of rapport at time=' + str(time.strftime("%d/%m/%Y")))
+    origin = repo.remote(name='origin')
+    origin.push()
 def main():
     aanmakenrapport()
+    gitpush()
 if __name__ == '__main__':
     main()
