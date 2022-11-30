@@ -1,0 +1,14 @@
+name                            freeparking
+----------------------------  -------------
+B-Park_Dampoort.csv                       0
+B-Park_Gent_Sint-Pieters.csv              0
+Dok_noord.csv                             0
+Getouw.csv                                0
+Ledeberg.csv                              0
+Ramen.csv                                 0
+Reep.csv                                  0
+Savaanstraat.csv                          0
+Sint-Michiels.csv                         0
+Sint-Pietersplein.csv                     0
+Tolhuis.csv                               0
+Vrijdagmarkt.csv                          0

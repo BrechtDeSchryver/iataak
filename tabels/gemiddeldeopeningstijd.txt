@@ -1,0 +1,14 @@
+name                            percentage open
+----------------------------  -----------------
+B-Park_Dampoort.csv                           1
+B-Park_Gent_Sint-Pieters.csv                  1
+Dok_noord.csv                                 1
+Getouw.csv                                    1
+Ledeberg.csv                                  1
+Ramen.csv                                     1
+Reep.csv                                      1
+Savaanstraat.csv                              1
+Sint-Michiels.csv                             1
+Sint-Pietersplein.csv                         1
+Tolhuis.csv                                   1
+Vrijdagmarkt.csv                              1
