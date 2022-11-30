@@ -88,7 +88,6 @@ def plot_table_totaal(dataset):
     col_names = ['name', 'totalcapacity']
     with open(gitloc+'/tabels/totaalcapaciteit.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
-    print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def plot_table_betalenparking(dataset):
     data=[]
     for name,item in dataset.items():
@@ -96,7 +95,6 @@ def plot_table_betalenparking(dataset):
     col_names = ['name', 'freeparking']
     with open(gitloc + '/tabels/gratisparking.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
-    print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def plot_gemiddeldeopeningstijd(dataset):
     data=[]
     for name,item in dataset.items():
@@ -104,7 +102,6 @@ def plot_gemiddeldeopeningstijd(dataset):
     col_names = ['name', 'percentage open'] 
     with open(gitloc +'/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
-    print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def main():
     dataset = read_data(csv_DIR)
     totaal = read_data_totaal(csv_DIR)
