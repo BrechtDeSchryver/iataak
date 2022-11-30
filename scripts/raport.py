@@ -4,8 +4,7 @@ import lorem
 from git import Repo
 import time
 #deze file zal de README.md aanpassen zodat een soort van rapport gegenereerd wordt
-GITLOC = 'C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak'
-#"/home/osboxes/desktop/git/iataak"
+GITLOC = "/home/osboxes/desktop/git/iataak"
 #'C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak'
 READMELOC = GITLOC + "/README.md"
 IMAGELOC= GITLOC + "/csvimage"
