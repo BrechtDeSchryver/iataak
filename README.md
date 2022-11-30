@@ -22,27 +22,27 @@ In dit rapport wordt de uitvoering van de IATAAK beschreven. voor deze taak maak
  - tijdens dit deel werd de data mooi opgemaakt
 [python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/report.py)
 ### Resultaten
-##grafiek van B-Park_Dampoort.csv.png
+## grafiek van B-Park_Dampoort.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/B-Park_Dampoort.csv.png)
-##grafiek van B-Park_Gent_Sint-Pieters.csv.png
+## grafiek van B-Park_Gent_Sint-Pieters.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/B-Park_Gent_Sint-Pieters.csv.png)
-##grafiek van Dok_noord.csv.png
+## grafiek van Dok_noord.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Dok_noord.csv.png)
-##grafiek van Getouw.csv.png
+## grafiek van Getouw.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Getouw.csv.png)
-##grafiek van Ledeberg.csv.png
+## grafiek van Ledeberg.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Ledeberg.csv.png)
-##grafiek van Ramen.csv.png
+## grafiek van Ramen.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Ramen.csv.png)
-##grafiek van Reep.csv.png
+## grafiek van Reep.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Reep.csv.png)
-##grafiek van Savaanstraat.csv.png
+## grafiek van Savaanstraat.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Savaanstraat.csv.png)
-##grafiek van Sint-Michiels.csv.png
+## grafiek van Sint-Michiels.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Sint-Michiels.csv.png)
-##grafiek van Sint-Pietersplein.csv.png
+## grafiek van Sint-Pietersplein.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Sint-Pietersplein.csv.png)
-##grafiek van Tolhuis.csv.png
+## grafiek van Tolhuis.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Tolhuis.csv.png)
-##grafiek van Vrijdagmarkt.csv.png
+## grafiek van Vrijdagmarkt.csv.png
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/Vrijdagmarkt.csv.png)

@@ -30,7 +30,7 @@ def aanmakenrapport():
         f.write('[python script](https://github.com/BrechtDeSchryver/iataak/blob/main/scripts/report.py)\n')
         f.write('### Resultaten\n')
         for file in os.listdir(IMAGELOC):
-            f.write("##grafiek van " + file + "\n")
+            f.write("## grafiek van " + file + "\n")
             f.write('![image]('"https://github.com/BrechtDeSchryver/iataak/blob/main/csvimage/"+file+')\n')
 def main():
     aanmakenrapport()
