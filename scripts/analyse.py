@@ -9,7 +9,10 @@ import os
 import sys
 from pandas.plotting import table
 import tabulate
-csv_DIR="C:/csv"
+csv_DIR="/data/csv"
+gitloc="/desktop/git/iataak"
+#"C:/csv"
+#"C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak"
 # Read the data
 def read_data_totaal(csv_DIR):
     totaal_dir=os.path.join(csv_DIR, "totaal")
@@ -37,7 +40,6 @@ def plot_gemiddeldebezetting(dataset):
     plt.ylabel('gemiddelde bezetting')
     plt.bar(x, y)
     plt.title('gemiddelde bezetting per parking')
-    plt.show()
 def plot_data(df,name):
     converted_dates = []
     for time in df['timestamp']:
@@ -55,8 +57,9 @@ def plot_data(df,name):
     plt.plot(x, y, label="occupation")
     plt.plot(x, df['totalcapacity'], label="max_occupation")
     plt.title(name)
-    plt.savefig('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage/' + name + '.png')
-    plt.show()
+    plt.savefig(gitloc+'/csvimage/' + name + '.png')
+    plt.cla()
+    plt.clf()
 
 #def plot_totalebeztting(df,name):
 #    
@@ -83,7 +86,7 @@ def plot_table_totaal(dataset):
     for name,item in dataset.items():
         data.append([name,item['totalcapacity'].iloc[0]])
     col_names = ['name', 'totalcapacity']
-    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/totaalcapaciteit.txt', 'w') as f:
+    with open(gitloc+'/tabels/totaalcapaciteit.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
     print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def plot_table_betalenparking(dataset):
@@ -91,7 +94,7 @@ def plot_table_betalenparking(dataset):
     for name,item in dataset.items():
         data.append([name,item['freeparking'].iloc[0]])
     col_names = ['name', 'freeparking']
-    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/gratisparking.txt', 'w') as f:
+    with open(gitloc + '/tabels/gratisparking.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
     print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def plot_gemiddeldeopeningstijd(dataset):
@@ -99,7 +102,7 @@ def plot_gemiddeldeopeningstijd(dataset):
     for name,item in dataset.items():
         data.append([name,item['isopennow'].mean()])
     col_names = ['name', 'percentage open'] 
-    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
+    with open(gitloc +'/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
     print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def main():
