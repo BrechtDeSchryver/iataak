@@ -57,31 +57,33 @@ def plot_data(df,name):
     plt.title(name)
     plt.savefig('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage/' + name + '.png')
     plt.show()
-def plot_totalebeztting(df,name):
-    converted_dates = []
-    print(df.keys())
-    for time in df['timestamp']:
-        time = str(time)
-        time = time[:4] + '-' + time[4:6] + '-' + time[6:8] + ' ' + time[8:10] + ':' + time[10:12] + ':' + time[12:14]
-        converted_dates.append(time)
-    x = converted_dates
-    y = df['occupation']
-    xfmt=md.DateFormatter('%Y-%m-%d %H:%M:%S')
-    ax=plt.gca()
-    ax.xaxis.set_major_formatter(xfmt)
-    ax.xaxis_date()
-    plt.xlabel('timestamp')
-    plt.ylabel('amount of cars')
-    plt.plot(x, y, label="occupation")
-    plt.title(name)
-    plt.savefig('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage/' + name + '.png')
-    plt.show()
+
+#def plot_totalebeztting(df,name):
+#    
+#    converted_dates = []
+#    print(df.keys())
+#    for time in df['timestamp']:
+#        time = str(time)
+#        time = time[:4] + '-' + time[4:6] + '-' + time[6:8] + ' ' + time[8:10] + ':' + time[10:12] + ':' + time[12:14]
+#        converted_dates.append(time)
+#    x = converted_dates
+#    y = df['occupation']
+#    xfmt=md.DateFormatter('%Y-%m-%d %H:%M:%S')
+#    ax=plt.gca()
+#    ax.xaxis.set_major_formatter(xfmt)
+#    ax.xaxis_date()
+#    plt.xlabel('timestamp')
+#    plt.ylabel('amount of cars')
+#    plt.plot(x, y, label="occupation")
+#    plt.title(name)
+#    plt.savefig('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage/' + name + '.png')
+#    plt.show()
 def plot_table_totaal(dataset):
     data=[]
     for name,item in dataset.items():
         data.append([name,item['totalcapacity'].iloc[0]])
     col_names = ['name', 'totalcapacity']
-    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/totaal.txt', 'w') as f:
+    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/totaalcapaciteit.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
     print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def plot_table_betalenparking(dataset):
@@ -89,7 +91,7 @@ def plot_table_betalenparking(dataset):
     for name,item in dataset.items():
         data.append([name,item['freeparking'].iloc[0]])
     col_names = ['name', 'freeparking']
-    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/betalen.txt', 'w') as f:
+    with open('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/tabels/gratisparking.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
     print(tabulate.tabulate(data, headers=col_names, tablefmt='github'))
 def plot_gemiddeldeopeningstijd(dataset):
@@ -104,13 +106,11 @@ def main():
     dataset = read_data(csv_DIR)
     totaal = read_data_totaal(csv_DIR)
     for name,df in dataset.items():
-        print(df.keys())
-        #plot_data(df,name))
-    print(totaal.keys())
-    plot_totalebeztting(totaal,"totaal")
-    #plot_gemiddeldeopeningstijd(dataset)
-    #plot_table_totaal(dataset)
-    #plot_table_betalenparking(dataset)
-    #plot_gemiddeldebezetting(dataset)
+        plot_data(df,name)
+    #plot_totalebeztting(totaal,"totaal")
+    plot_gemiddeldeopeningstijd(dataset)
+    plot_table_totaal(dataset)
+    plot_table_betalenparking(dataset)
+    plot_gemiddeldebezetting(dataset)
 if __name__ == '__main__':
     main()
