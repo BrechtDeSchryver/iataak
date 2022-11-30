@@ -33,15 +33,12 @@ search(){
     printf "DATADIR = %s/data-%s.json\n" "$DIRECTORY" "$TIMESTAMP">>"$LOGFILE";
     curl -s "$URL" | json_pp >> "$DIRECTORY/data-$TIMESTAMP.json" 2>> "$LOGFILE";
     NEWFILE="$DIRECTORY/data-$TIMESTAMP.json"
-    echo "test scraping gelukt"
 }
 fillcsv(){
     file=$1;
-    echo "$file";
     TOTAALOCCUPATION=0;
     TIMESTAMP=$(echo "$file" | tr -dc '0-9');
     parkings=$(jq .records[].fields.name "$file" | perl -pe 's{("[^"]+")}{($x=$1)=~s/ /_/g;$x}ge');
-    echo "$parkings";
     for parking in $parkings
     do  
         newparking=$(echo "$parking" | sed 's/"//g');
@@ -61,7 +58,6 @@ fillcsv(){
         IFS=$OIFS;
         temp="$DIRECTORY/csv/temp.json";
         echo "$parkingdata }">>"$temp";
-        jq . "$temp";
         NAAM=$(jq .name "$temp" | perl -pe 's{("[^"]+")}{($x=$1)=~s/ /_/g;$x}ge' | sed 's/"//g');
         ISOPENNOW=$(jq .isopennow "$temp");
         FREEPARKING=$(jq .freeparking "$temp");
@@ -74,7 +70,6 @@ fillcsv(){
         IFS='}';
     done
     IFS=$OIFS;
-    echo "test vullen gelukt"
     echo "$TOTAALOCCUPATION;$TIMESTAMP">>"$DIRECTORY/csv/totaal/totaal.csv";
 }
 init(){
