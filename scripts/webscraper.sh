@@ -17,9 +17,9 @@ timestamp(){
 search(){
     TIMESTAMP=$(timestamp);
     LOGFILE=$DIRECTORY/log-$TIMESTAMP.txt
-    touch $LOGFILE;
-    echo "TIMESTAMP = $TIMESTAMP\n">>"$LOGFILE";
-    echo "DATADIR = $DIRECTORY/data-$TIMESTAMP.json\n">>"$LOGFILE";
+    touch "$LOGFILE";
+    printf "TIMESTAMP = %s \n" "$TIMESTAMP">>"$LOGFILE";
+    printf "DATADIR = %s/data-%s.json\n" "$DIRECTORY" "$TIMESTAMP">>"$LOGFILE";
     curl -s "$URL" | json_pp >> "$DIRECTORY/data-$TIMESTAMP.json" 2>> "$LOGFILE";
 }
 #init functie
