@@ -35,46 +35,46 @@ dit vult elke 5 min de csv files aan en elk uur maakt hij nieuwe raporten die hi
 [bash script setup](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh)
 [bash script automatic run](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/automated.sh)
 ## grafiek van Savaanstraat
-Sed quiquia porro sit voluptatem sit. Quiquia modi consectetur dolor dolore quaerat quisquam. Amet consectetur dolore dolorem voluptatem quaerat ut quiquia. Quaerat quisquam numquam sed. Modi voluptatem neque magnam quisquam dolore. Quiquia ipsum eius amet est magnam porro dolore. Adipisci amet dolor est porro. Numquam magnam magnam consectetur non voluptatem sit. Quaerat amet tempora quisquam dolor quisquam consectetur etincidunt.
+Quaerat ipsum tempora aliquam eius etincidunt sed. Voluptatem etincidunt sed est aliquam ipsum porro quisquam. Numquam porro ipsum dolor adipisci ipsum. Numquam est dolor etincidunt. Est quisquam modi etincidunt adipisci dolore. Labore amet dolor dolorem tempora.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Savaanstraat.csv.png)
 ## grafiek van gemiddelde
-Ut sed neque quisquam numquam amet quiquia. Dolorem eius est quiquia ipsum aliquam porro ut. Dolor ut velit adipisci. Aliquam magnam tempora sit etincidunt labore aliquam. Porro dolore sit quiquia velit quaerat magnam. Quisquam quisquam sit neque. Est modi eius quisquam dolor quisquam velit. Tempora tempora velit non voluptatem.
+Ut neque eius ipsum. Aliquam amet modi adipisci etincidunt porro. Non quiquia dolor neque velit dolore. Neque dolor dolorem quisquam velit ipsum. Est quisquam sit numquam dolor dolore.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/gemiddelde.csv.png)
 ## grafiek van Sint-Michiels
-Voluptatem dolorem magnam voluptatem magnam labore numquam consectetur. Amet eius neque etincidunt numquam sit amet labore. Modi quaerat non dolorem. Consectetur sed non dolor quaerat porro. Sit ipsum tempora dolorem neque. Dolor labore ut ut labore modi quiquia.
+Adipisci amet aliquam magnam magnam. Numquam modi amet neque quisquam voluptatem quisquam tempora. Modi non quisquam quiquia sit. Consectetur quisquam velit labore est adipisci amet. Consectetur aliquam voluptatem quiquia voluptatem porro est. Tempora eius est sit tempora.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Sint-Michiels.csv.png)
 ## grafiek van Ledeberg
-Sit amet sed quiquia. Ipsum numquam dolor labore quisquam neque. Etincidunt etincidunt est eius dolor non tempora magnam. Eius eius consectetur quiquia quaerat quiquia sed. Non ipsum adipisci labore neque neque numquam. Numquam magnam modi labore. Etincidunt sed dolorem velit modi sed quaerat. Magnam dolorem numquam sed. Dolor dolore eius ipsum.
+Quisquam dolor aliquam ipsum ipsum sed eius. Etincidunt magnam eius quiquia consectetur velit sit. Magnam dolore sit eius dolorem etincidunt modi. Adipisci voluptatem tempora neque labore. Numquam ipsum dolor dolor dolorem. Neque neque voluptatem non sed dolore porro. Dolorem tempora sed ut sed labore. Adipisci ipsum etincidunt labore. Porro ut eius dolorem magnam est. Dolore quaerat adipisci sed tempora.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Ledeberg.csv.png)
 ## grafiek van Reep
-Quaerat neque velit quaerat modi porro sed. Ut etincidunt dolor quaerat est. Sit eius dolore ipsum quiquia etincidunt magnam non. Porro ipsum dolorem quiquia labore quiquia tempora ut. Porro tempora numquam neque quiquia non dolore.
+Neque etincidunt sed consectetur. Non modi labore labore porro est neque dolorem. Non sit modi voluptatem. Tempora dolor quaerat dolorem aliquam. Labore porro sit dolorem. Numquam porro consectetur velit adipisci.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Reep.csv.png)
 ## grafiek van B-Park_Dampoort
-Quaerat quaerat adipisci dolor consectetur non consectetur. Dolore consectetur sit adipisci dolorem aliquam modi. Sed sit ipsum dolore sit magnam sit adipisci. Non tempora quaerat dolore velit. Sit magnam velit dolor. Numquam aliquam quisquam quisquam quaerat consectetur ut. Numquam dolorem non quaerat labore. Tempora voluptatem voluptatem dolor sed velit. Sit dolore ut aliquam ipsum modi dolore. Adipisci labore modi dolor magnam adipisci.
+Modi consectetur ipsum neque dolore tempora labore. Quaerat modi tempora quiquia amet dolore. Adipisci ipsum modi quiquia modi neque. Est quiquia amet non dolor quaerat magnam. Porro ipsum magnam ut. Porro amet aliquam ut dolore dolorem dolorem. Numquam est quisquam etincidunt. Labore modi eius aliquam adipisci ut ut. Eius numquam sed neque est. Porro porro sit dolor quisquam dolore.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/B-Park_Dampoort.csv.png)
 ## grafiek van Ramen
-Est ipsum amet etincidunt neque. Eius sit amet est numquam. Dolorem amet sit dolor consectetur ipsum est. Dolorem quaerat numquam porro quaerat aliquam. Ut ut adipisci quisquam consectetur. Sit adipisci sit etincidunt ut neque amet. Dolor voluptatem quisquam sed. Velit velit quisquam ipsum.
+Quaerat aliquam ut sit velit quaerat non modi. Magnam quiquia velit neque tempora. Quiquia quaerat eius non amet. Amet labore etincidunt sit neque porro. Quiquia etincidunt voluptatem quisquam ipsum non. Quaerat quiquia velit tempora.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Ramen.csv.png)
 ## grafiek van B-Park_Gent_Sint-Pieters
-Porro velit labore amet adipisci quaerat non. Ipsum dolorem magnam sit. Quisquam est dolorem non ut quiquia velit. Adipisci quisquam numquam aliquam voluptatem. Dolor est non dolor. Sit modi quiquia sit. Dolore magnam neque consectetur consectetur magnam.
+Dolorem quaerat velit numquam porro dolore. Aliquam adipisci velit non quiquia. Ut neque aliquam adipisci. Velit etincidunt sed porro quisquam velit. Modi adipisci quisquam consectetur sit labore tempora. Ipsum dolore modi dolorem non. Magnam etincidunt ipsum sit labore etincidunt ipsum amet. Quaerat quisquam labore velit dolorem ut. Dolor quiquia aliquam modi est.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/B-Park_Gent_Sint-Pieters.csv.png)
 ## grafiek van Sint-Pietersplein
-Magnam adipisci eius amet quaerat adipisci. Neque sit velit velit neque. Dolorem ut modi magnam consectetur tempora. Quiquia neque quiquia magnam. Etincidunt sit porro est quiquia voluptatem magnam est.
+Aliquam ipsum dolore tempora non. Non eius dolore adipisci dolor. Dolor quaerat consectetur est eius tempora sit porro. Labore quisquam quisquam ipsum porro ut. Neque sed sit quiquia consectetur ipsum sed. Dolore amet numquam neque dolorem ipsum. Consectetur quisquam dolorem etincidunt adipisci. Voluptatem modi est dolorem. Porro velit modi quaerat.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Sint-Pietersplein.csv.png)
 ## grafiek van Dok_noord
-Dolore sit aliquam voluptatem dolorem ipsum quisquam consectetur. Labore velit magnam est sed. Etincidunt porro quaerat dolore consectetur magnam est. Sit modi quaerat magnam. Eius velit consectetur labore. Tempora sit ipsum consectetur adipisci est ut modi. Aliquam dolorem sed aliquam. Dolor est tempora velit magnam sed. Dolore ipsum non ipsum dolor sed dolore velit.
+Magnam quisquam sed quaerat consectetur sed porro. Amet labore quisquam quiquia amet non magnam ipsum. Neque etincidunt etincidunt labore porro eius sed velit. Quiquia dolor etincidunt numquam dolorem dolorem est. Voluptatem labore etincidunt consectetur. Dolorem porro tempora dolore. Amet etincidunt dolore amet sed quisquam numquam. Ipsum neque aliquam eius quaerat labore adipisci amet.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Dok_noord.csv.png)
 ## grafiek van Getouw
-Modi sed numquam quisquam. Porro voluptatem eius non aliquam magnam neque aliquam. Magnam quaerat quisquam sit ut quisquam magnam quiquia. Dolorem amet adipisci est adipisci velit adipisci adipisci. Numquam non consectetur est amet consectetur aliquam. Quisquam quisquam etincidunt dolor eius velit. Adipisci dolorem sed sit quaerat.
+Porro porro velit modi quaerat tempora amet. Tempora adipisci eius consectetur tempora. Numquam velit non quaerat. Eius aliquam quiquia quaerat aliquam voluptatem. Modi magnam quisquam modi magnam est adipisci. Quiquia adipisci quaerat porro neque modi est. Adipisci aliquam quisquam etincidunt. Adipisci quisquam est dolore neque. Sed eius adipisci dolore tempora magnam numquam quisquam. Numquam dolor ipsum amet adipisci adipisci.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Getouw.csv.png)
 ## grafiek van Vrijdagmarkt
-Adipisci aliquam sed voluptatem porro porro. Neque eius consectetur quaerat ipsum eius ut numquam. Dolorem labore ipsum quaerat tempora. Amet dolorem dolor labore tempora velit neque. Sit ut adipisci amet quaerat. Dolorem quiquia sed dolor modi velit dolor. Porro non ut porro aliquam numquam aliquam ut. Magnam eius adipisci dolore numquam neque ipsum ut.
+Velit ut dolore quisquam numquam numquam. Tempora numquam dolorem est consectetur consectetur. Sed modi dolorem sed adipisci. Magnam tempora tempora tempora porro amet. Aliquam ut quaerat consectetur ut velit.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Vrijdagmarkt.csv.png)
 ## grafiek van Tolhuis
-Dolorem est amet labore quaerat. Velit sed magnam labore magnam consectetur numquam. Quiquia sed modi ipsum ut eius sed quiquia. Modi quisquam etincidunt tempora. Amet quisquam tempora dolore. Magnam labore modi quiquia eius voluptatem labore porro.
+Dolore magnam est est neque quaerat. Quisquam numquam dolor magnam quisquam porro. Sit quiquia voluptatem neque sit adipisci. Ipsum labore porro velit voluptatem tempora magnam. Labore labore amet dolore magnam. Quaerat adipisci quaerat dolor adipisci neque eius. Neque sit amet dolorem non amet labore neque. Adipisci amet dolor numquam porro.
 ![image](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/Tolhuis.csv.png)
 ## tabel van gratisparking
-Dolore eius quisquam eius neque. Dolorem quaerat modi neque etincidunt. Dolore consectetur dolore amet sed aliquam dolor. Magnam aliquam neque velit modi. Sit porro velit quisquam dolorem. Etincidunt tempora tempora est consectetur sit numquam aliquam. Tempora ipsum etincidunt ut quisquam. Quisquam dolore labore quaerat sit modi quisquam.
+Porro modi numquam ipsum tempora adipisci. Modi aliquam magnam sed amet dolore eius. Adipisci velit modi velit quaerat. Modi modi dolore tempora sed. Est non dolore voluptatem quiquia modi. Voluptatem modi quaerat quaerat ut est aliquam. Velit modi dolorem ipsum labore quaerat numquam. Tempora dolorem quisquam consectetur numquam sed etincidunt modi.
 
 name                            freeparking
 ----------------------------  -------------
@@ -91,7 +91,7 @@ B-Park_Dampoort.csv                       0
 Ramen.csv                                 0
 Dok_noord.csv                             0
 ## tabel van gemiddeldeopeningstijd
-Ipsum quisquam quiquia dolor quiquia. Quisquam ipsum consectetur velit est neque sit amet. Numquam voluptatem quiquia tempora adipisci. Dolore aliquam adipisci numquam. Ut labore adipisci porro non modi modi tempora. Tempora porro ipsum est. Labore labore ipsum magnam. Porro ipsum ut adipisci adipisci aliquam. Numquam sit dolorem sed quaerat voluptatem magnam est. Neque magnam dolore numquam.
+Eius dolore quiquia quaerat tempora porro amet. Amet labore consectetur dolor. Dolorem est sit porro quaerat. Porro est est labore quiquia ipsum etincidunt non. Dolore magnam non neque eius. Quaerat ipsum adipisci consectetur dolore ipsum magnam. Etincidunt etincidunt ut labore quiquia. Ipsum dolorem est modi quiquia quiquia non amet.
 
 name                            percentage open
 ----------------------------  -----------------
@@ -108,7 +108,7 @@ B-Park_Dampoort.csv                           1
 Ramen.csv                                     1
 Dok_noord.csv                                 1
 ## tabel van totaalcapaciteit
-Non dolorem eius labore adipisci. Magnam numquam dolorem dolore dolorem dolore ipsum etincidunt. Dolorem adipisci velit sit neque etincidunt. Voluptatem tempora quaerat magnam eius voluptatem. Sed eius voluptatem adipisci magnam.
+Adipisci quaerat adipisci non ipsum dolor velit ut. Quaerat est neque dolore. Sed ut porro non ut. Adipisci modi sit est quaerat porro quiquia. Amet sit etincidunt quiquia dolor. Ut voluptatem dolore dolorem quisquam ipsum. Dolorem est ipsum consectetur dolore velit.
 
 name                            totalcapacity
 ----------------------------  ---------------
@@ -125,5 +125,5 @@ B-Park_Dampoort.csv                        60
 Ramen.csv                                 260
 Dok_noord.csv                             550
 ### Conclusie
-Eius labore dolor velit quiquia consectetur eius. Adipisci sed amet numquam quisquam. Quaerat est eius sit aliquam. Labore sit ipsum dolore dolorem labore modi. Neque sed voluptatem eius velit. Sit quaerat quiquia adipisci aliquam dolorem etincidunt. Amet quaerat amet dolor dolore tempora magnam. Eius voluptatem aliquam neque velit dolore.
+Voluptatem non modi eius quiquia ipsum quaerat. Dolore etincidunt ipsum numquam modi ut ut. Quisquam consectetur porro ut. Dolore eius magnam tempora sed eius amet consectetur. Voluptatem amet adipisci velit. Sed tempora sed ut voluptatem quisquam labore velit. Consectetur ut velit voluptatem est quiquia etincidunt. Est ut quisquam adipisci sed dolor. Modi velit labore voluptatem est modi dolore.
 Goodbye now
