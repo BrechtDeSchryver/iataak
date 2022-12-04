@@ -81,26 +81,26 @@
          "facets" : [
             {
                "count" : 9,
-               "name" : "2022-12-04T03:58:48+01:00",
-               "path" : "2022-12-04T03:58:48+01:00",
+               "name" : "2022-12-04T04:39:00+01:00",
+               "path" : "2022-12-04T04:39:00+01:00",
                "state" : "displayed"
             },
             {
                "count" : 1,
-               "name" : "2022-12-04T03:47:39+01:00",
-               "path" : "2022-12-04T03:47:39+01:00",
+               "name" : "2022-12-04T04:29:06+01:00",
+               "path" : "2022-12-04T04:29:06+01:00",
                "state" : "displayed"
             },
             {
                "count" : 1,
-               "name" : "2022-12-04T03:47:40+01:00",
-               "path" : "2022-12-04T03:47:40+01:00",
+               "name" : "2022-12-04T04:29:07+01:00",
+               "path" : "2022-12-04T04:29:07+01:00",
                "state" : "displayed"
             },
             {
                "count" : 1,
-               "name" : "2022-12-04T03:58:23+01:00",
-               "path" : "2022-12-04T03:58:23+01:00",
+               "name" : "2022-12-04T04:37:24+01:00",
+               "path" : "2022-12-04T04:37:24+01:00",
                "state" : "displayed"
             }
          ],
@@ -219,13 +219,83 @@
       {
          "datasetid" : "bezetting-parkeergarages-real-time",
          "fields" : {
-            "availablecapacity" : 338,
+            "availablecapacity" : 215,
+            "categorie" : "parking in LEZ",
+            "description" : "Ondergrondse parkeergarage Sint-Michiels in Gent",
+            "freeparking" : 0,
+            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-sint-michiels",
+            "isopennow" : 1,
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
+            "location" : [
+               51.0531100476836,
+               3.71972774000024
+            ],
+            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"Sint-Michielsplein 8\\n9000 Gent\", \"contactDetailsTelephoneNumber\": \"Tel.: 09 266 29 20\", \"coordinatesForDisplay\": {\"latitude\": 51.05311004768356, \"longitude\": 3.719727740000235}}",
+            "name" : "Sint-Michiels",
+            "occupancytrend" : "unknown",
+            "occupation" : 29,
+            "openingtimesdescription" : "24/7",
+            "operatorinformation" : "Mobiliteitsbedrijf Gent",
+            "temporaryclosed" : 0,
+            "totalcapacity" : 304,
+            "type" : "carPark",
+            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-sint-michiels"
+         },
+         "geometry" : {
+            "coordinates" : [
+               3.71972774000024,
+               51.0531100476836
+            ],
+            "type" : "Point"
+         },
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "a460a3673d92f66ed8d032c7031eeae448cf3e05"
+      },
+      {
+         "datasetid" : "bezetting-parkeergarages-real-time",
+         "fields" : {
+            "availablecapacity" : 672,
+            "categorie" : "parking in LEZ",
+            "description" : "? parkeergarage Sint-Pietersplein in Gent",
+            "freeparking" : 0,
+            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-sint-pietersplein",
+            "isopennow" : 1,
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
+            "location" : [
+               51.0420283498811,
+               3.72598186262055
+            ],
+            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"Sint-Pietersplein 65\\n9000 Gent\", \"contactDetailsTelephoneNumber\": \"Tel.: 09 266 29 60\", \"coordinatesForDisplay\": {\"latitude\": 51.04202834988112, \"longitude\": 3.7259818626205483}}",
+            "name" : "Sint-Pietersplein",
+            "occupancytrend" : "unknown",
+            "occupation" : 3,
+            "openingtimesdescription" : "24/7",
+            "operatorinformation" : "Mobiliteitsbedrijf Gent",
+            "temporaryclosed" : 0,
+            "totalcapacity" : 698,
+            "type" : "carPark",
+            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-sint-pietersplein"
+         },
+         "geometry" : {
+            "coordinates" : [
+               3.72598186262055,
+               51.0420283498811
+            ],
+            "type" : "Point"
+         },
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "cdab19b9cd68aee1f91caaff8d8e52c686d5cc35"
+      },
+      {
+         "datasetid" : "bezetting-parkeergarages-real-time",
+         "fields" : {
+            "availablecapacity" : 339,
             "categorie" : "parking buiten LEZ",
             "description" : "Bovengrondse parkeergarage Het Getouw in Gent",
             "freeparking" : 0,
             "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-het-getouw",
             "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
             "location" : [
                51.0725698838002,
                3.71483135767131
@@ -248,148 +318,8 @@
             ],
             "type" : "Point"
          },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "0a9c52418a6e7fe2a6cfedfcce920303e956e44d"
-      },
-      {
-         "datasetid" : "bezetting-parkeergarages-real-time",
-         "fields" : {
-            "availablecapacity" : 1203,
-            "categorie" : "parking buiten LEZ",
-            "description" : "Ondergrondse parkeergarage NMBS Gent-Sint-Pieters in Gent",
-            "freeparking" : 0,
-            "id" : "https://www.belgiantrain.be/nl/station-information/car-or-bike-at-station/b-parking/my-b-parking/gentstpieters",
-            "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:47:40+01:00",
-            "location" : [
-               51.0369,
-               3.70502
-            ],
-            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"?\", \"coordinatesForDisplay\": {\"latitude\": 51.0369, \"longitude\": 3.70502}}",
-            "name" : "B-Park Gent Sint-Pieters",
-            "occupancytrend" : "unknown",
-            "occupation" : 0,
-            "openingtimesdescription" : "24/7",
-            "operatorinformation" : "Mobiliteitsbedrijf Gent",
-            "temporaryclosed" : 0,
-            "totalcapacity" : 1200,
-            "type" : "carPark",
-            "urllinkaddress" : "https://www.belgiantrain.be/nl/station-information/car-or-bike-at-station/b-parking/my-b-parking/gentstpieters"
-         },
-         "geometry" : {
-            "coordinates" : [
-               3.70502,
-               51.0369
-            ],
-            "type" : "Point"
-         },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "acb3a24e6bccbc6eb48fafca1e232be994fdb644"
-      },
-      {
-         "datasetid" : "bezetting-parkeergarages-real-time",
-         "fields" : {
-            "availablecapacity" : 175,
-            "categorie" : "parking buiten LEZ",
-            "description" : "Bovengrondse parkeergarage NMBS Dampoort in Gent",
-            "freeparking" : 0,
-            "id" : "https://www.belgiantrain.be/nl/station-information/car-or-bike-at-station/b-parking/my-b-parking/gent-dampoort",
-            "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:47:39+01:00",
-            "location" : [
-               51.0561,
-               3.73956
-            ],
-            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"?\", \"coordinatesForDisplay\": {\"latitude\": 51.0561, \"longitude\": 3.73956}}",
-            "name" : "B-Park Dampoort",
-            "occupancytrend" : "unknown",
-            "occupation" : -2,
-            "openingtimesdescription" : "24/7",
-            "operatorinformation" : "Skidata",
-            "temporaryclosed" : 0,
-            "totalcapacity" : 170,
-            "type" : "offStreetParkingGround",
-            "urllinkaddress" : "https://www.belgiantrain.be/nl/station-information/car-or-bike-at-station/b-parking/my-b-parking/gent-dampoort"
-         },
-         "geometry" : {
-            "coordinates" : [
-               3.73956,
-               51.0561
-            ],
-            "type" : "Point"
-         },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "757969ecbd21d798ee818702d6f5a583cf72c3e4"
-      },
-      {
-         "datasetid" : "bezetting-parkeergarages-real-time",
-         "fields" : {
-            "availablecapacity" : 413,
-            "categorie" : "parking in LEZ",
-            "description" : "Ondergrondse parkeergarage Vrijdagmarkt in Gent",
-            "freeparking" : 0,
-            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-vrijdagmarkt",
-            "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
-            "location" : [
-               51.0571340595341,
-               3.72607177787615
-            ],
-            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"Vrijdagmarkt 1\\n9000 Gent\", \"contactDetailsTelephoneNumber\": \"Tel.: 09 266 29 00\\n(permanentie)\\nTel.: 09 266 29 01\\n(tijdens kantooruren)\", \"coordinatesForDisplay\": {\"latitude\": 51.05713405953412, \"longitude\": 3.726071777876147}}",
-            "name" : "Vrijdagmarkt",
-            "occupancytrend" : "unknown",
-            "occupation" : 31,
-            "openingtimesdescription" : "24/7",
-            "operatorinformation" : "Mobiliteitsbedrijf Gent",
-            "temporaryclosed" : 0,
-            "totalcapacity" : 605,
-            "type" : "carPark",
-            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-vrijdagmarkt"
-         },
-         "geometry" : {
-            "coordinates" : [
-               3.72607177787615,
-               51.0571340595341
-            ],
-            "type" : "Point"
-         },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "0629f3c13281c6468ee2368e52056a391fbbef13"
-      },
-      {
-         "datasetid" : "bezetting-parkeergarages-real-time",
-         "fields" : {
-            "availablecapacity" : 204,
-            "categorie" : "parking in LEZ",
-            "description" : "Ondergrondse parkeergarage Sint-Michiels in Gent",
-            "freeparking" : 0,
-            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-sint-michiels",
-            "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
-            "location" : [
-               51.0531100476836,
-               3.71972774000024
-            ],
-            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"Sint-Michielsplein 8\\n9000 Gent\", \"contactDetailsTelephoneNumber\": \"Tel.: 09 266 29 20\", \"coordinatesForDisplay\": {\"latitude\": 51.05311004768356, \"longitude\": 3.719727740000235}}",
-            "name" : "Sint-Michiels",
-            "occupancytrend" : "unknown",
-            "occupation" : 32,
-            "openingtimesdescription" : "24/7",
-            "operatorinformation" : "Mobiliteitsbedrijf Gent",
-            "temporaryclosed" : 0,
-            "totalcapacity" : 304,
-            "type" : "carPark",
-            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-sint-michiels"
-         },
-         "geometry" : {
-            "coordinates" : [
-               3.71972774000024,
-               51.0531100476836
-            ],
-            "type" : "Point"
-         },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "8b900e767a5d5a613f1dba6291398b9387173ef5"
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "323a216ed1038414f63ed241260c8122809b100e"
       },
       {
          "datasetid" : "bezetting-parkeergarages-real-time",
@@ -400,7 +330,7 @@
             "freeparking" : 0,
             "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-savaanstraat",
             "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
             "location" : [
                51.0487736254311,
                3.72346277266671
@@ -423,43 +353,113 @@
             ],
             "type" : "Point"
          },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "7e084811df58269b5f23f91b9781a7a10e483fd1"
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "9e5cd772bc53d85563cd73ade0d25b698b6e2bce"
       },
       {
          "datasetid" : "bezetting-parkeergarages-real-time",
          "fields" : {
-            "availablecapacity" : 74,
+            "availablecapacity" : 76,
             "categorie" : "parking in LEZ",
-            "description" : "Ondergrondse parkeergarage Tolhuis in Gent",
+            "description" : "Ondergrondse parkeergarage Ramen in Gent",
             "freeparking" : 0,
-            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-tolhuis",
+            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-ramen",
             "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
             "location" : [
-               51.0637023559265,
-               3.7249683672819
+               51.05532,
+               3.71653
             ],
-            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"?\", \"coordinatesForDisplay\": {\"latitude\": 51.0637023559265, \"longitude\": 3.724968367281895}}",
-            "name" : "Tolhuis",
+            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"23\", \"roadName\": \"Ramen 23\\n9000 Gent\", \"contactDetailsTelephoneNumber\": \"Tel.: 09 266 29 70\", \"coordinatesForDisplay\": {\"latitude\": 51.05532, \"longitude\": 3.71653}}",
+            "name" : "Ramen",
             "occupancytrend" : "unknown",
-            "occupation" : 50,
+            "occupation" : 70,
             "openingtimesdescription" : "24/7",
             "operatorinformation" : "Mobiliteitsbedrijf Gent",
             "temporaryclosed" : 0,
-            "totalcapacity" : 150,
-            "type" : "offStreetParkingGround",
-            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-tolhuis"
+            "totalcapacity" : 262,
+            "type" : "carPark",
+            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-ramen"
          },
          "geometry" : {
             "coordinates" : [
-               3.7249683672819,
-               51.0637023559265
+               3.71653,
+               51.05532
             ],
             "type" : "Point"
          },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "b5dad2de12f52bc38a33014ac7a656ec74127401"
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "c5ac9c08353cc144377a2346400e4082c6377d79"
+      },
+      {
+         "datasetid" : "bezetting-parkeergarages-real-time",
+         "fields" : {
+            "availablecapacity" : 443,
+            "categorie" : "parking buiten LEZ",
+            "description" : "Bovengrondse parkeergarage Ledeberg in Gent",
+            "freeparking" : 0,
+            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-ledeberg",
+            "isopennow" : 1,
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
+            "location" : [
+               51.0363416904817,
+               3.73857109437115
+            ],
+            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"?\", \"coordinatesForDisplay\": {\"latitude\": 51.03634169048174, \"longitude\": 3.738571094371151}}",
+            "name" : "Ledeberg",
+            "occupancytrend" : "unknown",
+            "occupation" : 11,
+            "openingtimesdescription" : "24/7",
+            "operatorinformation" : "Mobiliteitsbedrijf Gent",
+            "temporaryclosed" : 0,
+            "totalcapacity" : 500,
+            "type" : "offStreetParkingGround",
+            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-ledeberg"
+         },
+         "geometry" : {
+            "coordinates" : [
+               3.73857109437115,
+               51.0363416904817
+            ],
+            "type" : "Point"
+         },
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "cd2b43f63596c4b2a26220be24bb522bacd0e85a"
+      },
+      {
+         "datasetid" : "bezetting-parkeergarages-real-time",
+         "fields" : {
+            "availablecapacity" : 175,
+            "categorie" : "parking buiten LEZ",
+            "description" : "Bovengrondse parkeergarage NMBS Dampoort in Gent",
+            "freeparking" : 0,
+            "id" : "https://www.belgiantrain.be/nl/station-information/car-or-bike-at-station/b-parking/my-b-parking/gent-dampoort",
+            "isopennow" : 1,
+            "lastupdate" : "2022-12-04T04:29:06+01:00",
+            "location" : [
+               51.0561,
+               3.73956
+            ],
+            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"?\", \"coordinatesForDisplay\": {\"latitude\": 51.0561, \"longitude\": 3.73956}}",
+            "name" : "B-Park Dampoort",
+            "occupancytrend" : "unknown",
+            "occupation" : -2,
+            "openingtimesdescription" : "24/7",
+            "operatorinformation" : "Skidata",
+            "temporaryclosed" : 0,
+            "totalcapacity" : 170,
+            "type" : "offStreetParkingGround",
+            "urllinkaddress" : "https://www.belgiantrain.be/nl/station-information/car-or-bike-at-station/b-parking/my-b-parking/gent-dampoort"
+         },
+         "geometry" : {
+            "coordinates" : [
+               3.73956,
+               51.0561
+            ],
+            "type" : "Point"
+         },
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "83019b83b06375dc72b066b184b4a00ede555213"
       },
       {
          "datasetid" : "bezetting-parkeergarages-real-time",
@@ -470,7 +470,7 @@
             "freeparking" : 0,
             "id" : "https://be.parkindigo.com/nl/car-park/parking-dok-noord",
             "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:23+01:00",
+            "lastupdate" : "2022-12-04T04:37:24+01:00",
             "location" : [
                51.0656849358196,
                3.73283899137206
@@ -494,19 +494,54 @@
             ],
             "type" : "Point"
          },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "f8c2effce04a21d5e48d277b8aa6b12c8ffcc6ee"
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "8b4920754f6a3a2ec1632f80c3d4bda054f694ab"
       },
       {
          "datasetid" : "bezetting-parkeergarages-real-time",
          "fields" : {
-            "availablecapacity" : 284,
+            "availablecapacity" : 423,
+            "categorie" : "parking in LEZ",
+            "description" : "Ondergrondse parkeergarage Vrijdagmarkt in Gent",
+            "freeparking" : 0,
+            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-vrijdagmarkt",
+            "isopennow" : 1,
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
+            "location" : [
+               51.0571340595341,
+               3.72607177787615
+            ],
+            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"Vrijdagmarkt 1\\n9000 Gent\", \"contactDetailsTelephoneNumber\": \"Tel.: 09 266 29 00\\n(permanentie)\\nTel.: 09 266 29 01\\n(tijdens kantooruren)\", \"coordinatesForDisplay\": {\"latitude\": 51.05713405953412, \"longitude\": 3.726071777876147}}",
+            "name" : "Vrijdagmarkt",
+            "occupancytrend" : "unknown",
+            "occupation" : 30,
+            "openingtimesdescription" : "24/7",
+            "operatorinformation" : "Mobiliteitsbedrijf Gent",
+            "temporaryclosed" : 0,
+            "totalcapacity" : 605,
+            "type" : "carPark",
+            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-vrijdagmarkt"
+         },
+         "geometry" : {
+            "coordinates" : [
+               3.72607177787615,
+               51.0571340595341
+            ],
+            "type" : "Point"
+         },
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "2387a7b23e21633301bcd82e8534f960a53ee8e9"
+      },
+      {
+         "datasetid" : "bezetting-parkeergarages-real-time",
+         "fields" : {
+            "availablecapacity" : 287,
             "categorie" : "parking in LEZ",
             "description" : "? parkeergarage Reep in Gent",
             "freeparking" : 0,
             "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-reep",
             "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
             "location" : [
                51.0521583852315,
                3.72989288963989
@@ -529,113 +564,78 @@
             ],
             "type" : "Point"
          },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "a16f21dd07da834c0bc84be68e5d4fe943f0910f"
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "6526d247ed195a5904daf2747947a9d6dfbad6e2"
       },
       {
          "datasetid" : "bezetting-parkeergarages-real-time",
          "fields" : {
-            "availablecapacity" : 668,
+            "availablecapacity" : 74,
             "categorie" : "parking in LEZ",
-            "description" : "? parkeergarage Sint-Pietersplein in Gent",
+            "description" : "Ondergrondse parkeergarage Tolhuis in Gent",
             "freeparking" : 0,
-            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-sint-pietersplein",
+            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-tolhuis",
             "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
+            "lastupdate" : "2022-12-04T04:39:00+01:00",
             "location" : [
-               51.0420283498811,
-               3.72598186262055
+               51.0637023559265,
+               3.7249683672819
             ],
-            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"Sint-Pietersplein 65\\n9000 Gent\", \"contactDetailsTelephoneNumber\": \"Tel.: 09 266 29 60\", \"coordinatesForDisplay\": {\"latitude\": 51.04202834988112, \"longitude\": 3.7259818626205483}}",
-            "name" : "Sint-Pietersplein",
+            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"?\", \"coordinatesForDisplay\": {\"latitude\": 51.0637023559265, \"longitude\": 3.724968367281895}}",
+            "name" : "Tolhuis",
             "occupancytrend" : "unknown",
-            "occupation" : 4,
+            "occupation" : 50,
             "openingtimesdescription" : "24/7",
             "operatorinformation" : "Mobiliteitsbedrijf Gent",
             "temporaryclosed" : 0,
-            "totalcapacity" : 698,
-            "type" : "carPark",
-            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-sint-pietersplein"
-         },
-         "geometry" : {
-            "coordinates" : [
-               3.72598186262055,
-               51.0420283498811
-            ],
-            "type" : "Point"
-         },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "d62f1b89c9fa427f44ae55d17cd2eb0eeb51924b"
-      },
-      {
-         "datasetid" : "bezetting-parkeergarages-real-time",
-         "fields" : {
-            "availablecapacity" : 75,
-            "categorie" : "parking in LEZ",
-            "description" : "Ondergrondse parkeergarage Ramen in Gent",
-            "freeparking" : 0,
-            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-ramen",
-            "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
-            "location" : [
-               51.05532,
-               3.71653
-            ],
-            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"23\", \"roadName\": \"Ramen 23\\n9000 Gent\", \"contactDetailsTelephoneNumber\": \"Tel.: 09 266 29 70\", \"coordinatesForDisplay\": {\"latitude\": 51.05532, \"longitude\": 3.71653}}",
-            "name" : "Ramen",
-            "occupancytrend" : "unknown",
-            "occupation" : 71,
-            "openingtimesdescription" : "24/7",
-            "operatorinformation" : "Mobiliteitsbedrijf Gent",
-            "temporaryclosed" : 0,
-            "totalcapacity" : 262,
-            "type" : "carPark",
-            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-ramen"
-         },
-         "geometry" : {
-            "coordinates" : [
-               3.71653,
-               51.05532
-            ],
-            "type" : "Point"
-         },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "f4911128c6d3ac2f52fc112de02a75ac6b7f0b4b"
-      },
-      {
-         "datasetid" : "bezetting-parkeergarages-real-time",
-         "fields" : {
-            "availablecapacity" : 444,
-            "categorie" : "parking buiten LEZ",
-            "description" : "Bovengrondse parkeergarage Ledeberg in Gent",
-            "freeparking" : 0,
-            "id" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-ledeberg",
-            "isopennow" : 1,
-            "lastupdate" : "2022-12-04T03:58:48+01:00",
-            "location" : [
-               51.0363416904817,
-               3.73857109437115
-            ],
-            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"?\", \"coordinatesForDisplay\": {\"latitude\": 51.03634169048174, \"longitude\": 3.738571094371151}}",
-            "name" : "Ledeberg",
-            "occupancytrend" : "unknown",
-            "occupation" : 11,
-            "openingtimesdescription" : "24/7",
-            "operatorinformation" : "Mobiliteitsbedrijf Gent",
-            "temporaryclosed" : 0,
-            "totalcapacity" : 500,
+            "totalcapacity" : 150,
             "type" : "offStreetParkingGround",
-            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-ledeberg"
+            "urllinkaddress" : "https://stad.gent/nl/mobiliteit-openbare-werken/parkeren/parkings-gent/parking-tolhuis"
          },
          "geometry" : {
             "coordinates" : [
-               3.73857109437115,
-               51.0363416904817
+               3.7249683672819,
+               51.0637023559265
             ],
             "type" : "Point"
          },
-         "record_timestamp" : "2022-12-04T02:59:05.744Z",
-         "recordid" : "13b2f823eca30af57e1999be030787fb2ccdcb54"
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "77b02a13224a64b21439553df54b55f9f340091c"
+      },
+      {
+         "datasetid" : "bezetting-parkeergarages-real-time",
+         "fields" : {
+            "availablecapacity" : 1203,
+            "categorie" : "parking buiten LEZ",
+            "description" : "Ondergrondse parkeergarage NMBS Gent-Sint-Pieters in Gent",
+            "freeparking" : 0,
+            "id" : "https://www.belgiantrain.be/nl/station-information/car-or-bike-at-station/b-parking/my-b-parking/gentstpieters",
+            "isopennow" : 1,
+            "lastupdate" : "2022-12-04T04:29:07+01:00",
+            "location" : [
+               51.0369,
+               3.70502
+            ],
+            "locationanddimension" : "{\"specificAccessInformation\": [\"inrit\"], \"level\": \"0\", \"roadNumber\": \"?\", \"roadName\": \"?\", \"coordinatesForDisplay\": {\"latitude\": 51.0369, \"longitude\": 3.70502}}",
+            "name" : "B-Park Gent Sint-Pieters",
+            "occupancytrend" : "unknown",
+            "occupation" : 0,
+            "openingtimesdescription" : "24/7",
+            "operatorinformation" : "Mobiliteitsbedrijf Gent",
+            "temporaryclosed" : 0,
+            "totalcapacity" : 1200,
+            "type" : "carPark",
+            "urllinkaddress" : "https://www.belgiantrain.be/nl/station-information/car-or-bike-at-station/b-parking/my-b-parking/gentstpieters"
+         },
+         "geometry" : {
+            "coordinates" : [
+               3.70502,
+               51.0369
+            ],
+            "type" : "Point"
+         },
+         "record_timestamp" : "2022-12-04T03:39:07.35Z",
+         "recordid" : "6f721a9a69640c98f7a6bd2c4369c83b588952ec"
       }
    ]
 }
