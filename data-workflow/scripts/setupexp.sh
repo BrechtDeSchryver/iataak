@@ -59,7 +59,7 @@ init(){
         echo "      het programma default dan naar de default waarden in het script"
         exit 0
     fi
-    while [ $# -gt 0] do
+    while [ $# -gt 0]; do
         case "$1" in
             -v)
             # ask user for directory
@@ -75,7 +75,7 @@ init(){
                 ;;
         esac;
         shift;
-    done;
+    done
     $SCRIPTDIR="/";
     envcheck "$envscriptdir" "$SCRIPTDIR_default" "$SCRIPTDIR";
     echo "$SCRIPTDIR";
