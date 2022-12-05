@@ -3,7 +3,7 @@ import os
 import lorem
 from git import Repo
 import time
-import markdown2
+import aspose.words as aw
 GITFILELOC="/home/osboxes/Desktop/git/iataak"
 GITLOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
 READMELOC = GITLOC + "/README.md"
@@ -58,10 +58,10 @@ def aanmakenrapport():
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
-    with(open(READMELOC,'r')) as f:
-        html = markdown2.markdown(f.read())
-    with(open(PDFLOC,'w')) as f:
-        f.write(html)
+    mddoc = aw.Document(READMELOC)
+    save_options = aw.saving.PdfSaveOptions()
+    save_options.compliance = aw.saving.PdfCompliance.PDF17
+    mddoc.save(PDFLOC, save_options)
 def gitpush():
     repo = Repo(GITFILELOC)
     repo.git.add('--all')

@@ -29,7 +29,7 @@ pythonlibdownload(){
     pip install matplotlib >> "$1"
     pip install datetime >> "$1"
     pip install tabulate >> "$1"
-    pip install markdown2pdf >> "$1"
+    pip install aspose-words >> "$1"
 }
 #download jq package
 setupjq(){
