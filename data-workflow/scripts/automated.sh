@@ -1,6 +1,11 @@
 #!/bin/bash
 #author=Brecht De Schryver
+set -o errexit
+set -o nounset
+set -o pipefail
+#default waarden mogen aangepast worden
 DIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data"
+#URL van de site
 URL="https://data.stad.gent/api/records/1.0/search/?dataset=bezetting-parkeergarages-real-time&q=&rows=20&facet=name&facet=lastupdate&facet=description&facet=categorie"
 newcsv(){
     name=$1;

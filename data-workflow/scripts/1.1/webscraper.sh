@@ -1,6 +1,8 @@
 #!/bin/bash
 #author=Brecht De Schryver
-
+set -o errexit
+set -o nounset
+set -o pipefail
 # This script is used to scrape api data from the data.stad.gent api
 # and store it in a json file.
 URL="https://data.stad.gent/api/records/1.0/search/?dataset=bezetting-parkeergarages-real-time&q=&rows=20&facet=name&facet=lastupdate&facet=description&facet=categorie"
