@@ -75,7 +75,7 @@ init(){
                 ;;
         esac;
         shift;
-    done;
+    done
     $SCRIPTDIR="/";
     envcheck "$envscriptdir" "$SCRIPTDIR_default" "$SCRIPTDIR";
     echo "$SCRIPTDIR";
