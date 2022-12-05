@@ -72,9 +72,7 @@ init(){
       # remove env vars
         unset envscriptdir
         unset envgitdir
-    *)
-      # do nothing
-      ;;
+        ;;
   esac
   shift
 done
