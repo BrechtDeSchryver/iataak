@@ -3,13 +3,13 @@ import os
 import lorem
 from git import Repo
 import time
-#deze file zal de README.md aanpassen zodat een soort van rapport gegenereerd wordt
+import markdown2
 GITFILELOC="/home/osboxes/Desktop/git/iataak"
 GITLOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
-#'C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak'
 READMELOC = GITLOC + "/README.md"
 IMAGELOC= GITLOC + "/csvimage"
 TABELSLOC= GITLOC + "/tabels"
+PDFLOC = GITLOC + "/rapport.pdf"
 def aanmakenrapport():
     with open(READMELOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
@@ -58,6 +58,10 @@ def aanmakenrapport():
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
+    with(open(READMELOC,'r')) as f:
+        html = markdown2.markdown(f.read())
+    with(open(PDFLOC,'w')) as f:
+        f.write(html)
 def gitpush():
     repo = Repo(GITFILELOC)
     repo.git.add('--all')
