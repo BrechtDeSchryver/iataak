@@ -61,20 +61,20 @@ init(){
     fi
     while [ $# -gt 0] do
         case "$1" in
-    -v)
-      # ask user for directory
-      read -p "Geef de directory waar alle scripts zich bevinden: " input
-      export envscriptdir="$input"
-      read -p "Geef de directory waar de git repo zich bevind: " input
-      export envgitdir="$input"
-      ;;
-    -d)
-      # remove env vars
-        unset envscriptdir
-        unset envgitdir
-        ;;
-    esac;
-    shift;
+            -v)
+            # ask user for directory
+            read -p "Geef de directory waar alle scripts zich bevinden: " input
+            export envscriptdir="$input"
+            read -p "Geef de directory waar de git repo zich bevind: " input
+            export envgitdir="$input"
+            ;;
+            -d)
+            # remove env vars
+                unset envscriptdir
+                unset envgitdir
+                ;;
+        esac;
+        shift;
     done;
     $SCRIPTDIR="/";
     envcheck "$envscriptdir" "$SCRIPTDIR_default" "$SCRIPTDIR";
