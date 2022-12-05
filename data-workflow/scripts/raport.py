@@ -60,8 +60,8 @@ def aanmakenrapport():
         f.write("Goodbye now")
 def gitpush():
     repo = Repo(GITFILELOC)
-    repo.git.add(update=True)
-    repo.index.commit('automated commit of rapport at time=' + str(time.strftime("%d/%m/%Y")))
+    repo.git.add('--all')
+    repo.index.commit('automated commit of rapport')
     origin = repo.remote(name='origin')
     origin.push()
 def main():

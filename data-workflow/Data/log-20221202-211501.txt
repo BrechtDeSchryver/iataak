@@ -1,0 +1,2 @@
+TIMESTAMP = 20221202-211501 
+DATADIR = /home/osboxes/Desktop/git/iataak/data-workflow/Data/data-20221202-211501.json

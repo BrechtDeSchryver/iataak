@@ -1,0 +1,17 @@
+{
+   "nhits" : 0,
+   "parameters" : {
+      "dataset" : "bezetting-parkeergarages-real-time",
+      "facet" : [
+         "name",
+         "lastupdate",
+         "description",
+         "categorie"
+      ],
+      "format" : "json",
+      "rows" : 20,
+      "start" : 0,
+      "timezone" : "UTC"
+   },
+   "records" : []
+}
