@@ -41,9 +41,9 @@ setupjq(){
 # zet gebruikte var = default value als de env var niet bestaat
 envcheck(){
     if [ -z $1] then 
-        $3=$2
+        $3=$2;
     else 
-        $3=$1
+        $3=$1;
     fi
 }
 init(){
