@@ -91,4 +91,4 @@ init(){
     createcrontab "$logfile";
     setupjq "$logfile";
 }
-init
+init $#;
