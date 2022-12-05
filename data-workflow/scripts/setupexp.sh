@@ -47,7 +47,7 @@ envcheck(){
     fi
 }
 init(){
-    if [ "$1" == "-h" ]  [ "$1" == "-?" ]  [ "$1" == "--help" ]; then
+    if [ "$1" == "-h" ] || [ "$1" == "-?" ] || [ "$1" == "--help" ]; then
         echo "Usage: setup.sh [OPTIONS] "
         echo "Dit script instaleerd de benodigde software en maakt een crontab aan"
         echo "voor het ophalen, analyseren en rapporteren van de data"
