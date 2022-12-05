@@ -66,6 +66,5 @@ def gitpush():
     origin.push()
 def main():
     aanmakenrapport()
-    gitpush()
 if __name__ == '__main__':
     main()
