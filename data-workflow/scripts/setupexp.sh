@@ -40,7 +40,7 @@ setupjq(){
 # $3 = var used in function
 # zet gebruikte var = default value als de env var niet bestaat
 envcheck(){
-    if [[ -z $1]] then 
+    if [ -z $1] then 
         $3=$2
     else 
         $3=$1
