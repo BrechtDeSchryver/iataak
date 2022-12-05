@@ -2,29 +2,67 @@ setting up automatic download and upload
 downloading pythong libraries:
 Requirement already satisfied: lorem in /home/osboxes/.local/lib/python3.8/site-packages (0.1.1)
 Requirement already satisfied: pandas in /home/osboxes/.local/lib/python3.8/site-packages (1.5.2)
-Requirement already satisfied: pytz>=2020.1 in /home/osboxes/.local/lib/python3.8/site-packages (from pandas) (2022.6)
 Requirement already satisfied: numpy>=1.20.3; python_version < "3.10" in /home/osboxes/.local/lib/python3.8/site-packages (from pandas) (1.23.5)
+Requirement already satisfied: pytz>=2020.1 in /home/osboxes/.local/lib/python3.8/site-packages (from pandas) (2022.6)
 Requirement already satisfied: python-dateutil>=2.8.1 in /home/osboxes/.local/lib/python3.8/site-packages (from pandas) (2.8.2)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.8.1->pandas) (1.14.0)
 Requirement already satisfied: matplotlib in /home/osboxes/.local/lib/python3.8/site-packages (3.6.2)
 Requirement already satisfied: fonttools>=4.22.0 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (4.38.0)
+Requirement already satisfied: pyparsing>=2.2.1 in /usr/lib/python3/dist-packages (from matplotlib) (2.4.6)
+Requirement already satisfied: python-dateutil>=2.7 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (2.8.2)
+Requirement already satisfied: numpy>=1.19 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (1.23.5)
+Requirement already satisfied: contourpy>=1.0.1 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (1.0.6)
 Requirement already satisfied: cycler>=0.10 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (0.11.0)
 Requirement already satisfied: pillow>=6.2.0 in /usr/lib/python3/dist-packages (from matplotlib) (7.0.0)
-Requirement already satisfied: kiwisolver>=1.0.1 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (1.4.4)
-Requirement already satisfied: python-dateutil>=2.7 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (2.8.2)
-Requirement already satisfied: pyparsing>=2.2.1 in /usr/lib/python3/dist-packages (from matplotlib) (2.4.6)
 Requirement already satisfied: packaging>=20.0 in /usr/lib/python3/dist-packages (from matplotlib) (20.3)
-Requirement already satisfied: contourpy>=1.0.1 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (1.0.6)
-Requirement already satisfied: numpy>=1.19 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (1.23.5)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/osboxes/.local/lib/python3.8/site-packages (from matplotlib) (1.4.4)
 Requirement already satisfied: six>=1.5 in /usr/lib/python3/dist-packages (from python-dateutil>=2.7->matplotlib) (1.14.0)
 Requirement already satisfied: datetime in /home/osboxes/.local/lib/python3.8/site-packages (4.7)
-Requirement already satisfied: pytz in /home/osboxes/.local/lib/python3.8/site-packages (from datetime) (2022.6)
 Requirement already satisfied: zope.interface in /home/osboxes/.local/lib/python3.8/site-packages (from datetime) (5.5.2)
+Requirement already satisfied: pytz in /home/osboxes/.local/lib/python3.8/site-packages (from datetime) (2022.6)
 Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from zope.interface->datetime) (45.2.0)
 Requirement already satisfied: tabulate in /home/osboxes/.local/lib/python3.8/site-packages (0.9.0)
+Collecting markdown2pdf
+  Downloading Markdown2PDF-0.1.4.tar.gz (2.6 kB)
+Collecting markdown2
+  Downloading markdown2-2.4.6-py2.py3-none-any.whl (37 kB)
+Collecting weasyprint
+  Downloading weasyprint-57.1-py3-none-any.whl (262 kB)
+Collecting pydyf>=0.5.0
+  Downloading pydyf-0.5.0-py3-none-any.whl (6.8 kB)
+Collecting tinycss2>=1.0.0
+  Downloading tinycss2-1.2.1-py3-none-any.whl (21 kB)
+Collecting Pillow>=9.1.0
+  Downloading Pillow-9.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+Collecting html5lib>=1.1
+  Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+Collecting cssselect2>=0.1
+  Downloading cssselect2-0.7.0-py3-none-any.whl (15 kB)
+Collecting cffi>=0.6
+  Downloading cffi-1.15.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+Collecting Pyphen>=0.9.1
+  Downloading pyphen-0.13.2-py3-none-any.whl (2.0 MB)
+Requirement already satisfied: fonttools[woff]>=4.0.0 in /home/osboxes/.local/lib/python3.8/site-packages (from weasyprint->markdown2pdf) (4.38.0)
+Collecting webencodings>=0.4
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: six>=1.9 in /usr/lib/python3/dist-packages (from html5lib>=1.1->weasyprint->markdown2pdf) (1.14.0)
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting zopfli>=0.1.4; extra == "woff"
+  Downloading zopfli-0.2.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (704 kB)
+Collecting brotli>=1.0.1; platform_python_implementation == "CPython" and extra == "woff"
+  Downloading Brotli-1.0.9-cp38-cp38-manylinux1_x86_64.whl (357 kB)
+Building wheels for collected packages: markdown2pdf
+  Building wheel for markdown2pdf (setup.py): started
+  Building wheel for markdown2pdf (setup.py): finished with status 'done'
+  Created wheel for markdown2pdf: filename=Markdown2PDF-0.1.4-py3-none-any.whl size=2995 sha256=d1ee37e45da897a705b9b1c91c6fef077654d9493421744e822bfcf6096c4456
+  Stored in directory: /home/osboxes/.cache/pip/wheels/ba/bb/e5/b22e705e0cddf5932c70f5fdf8503a1fc96c2dc4081141e384
+Successfully built markdown2pdf
+Installing collected packages: markdown2, pydyf, webencodings, tinycss2, Pillow, html5lib, cssselect2, pycparser, cffi, Pyphen, weasyprint, markdown2pdf, zopfli, brotli
+Successfully installed Pillow-9.3.0 Pyphen-0.13.2 brotli-1.0.9 cffi-1.15.1 cssselect2-0.7.0 html5lib-1.1 markdown2-2.4.6 markdown2pdf-0.1.4 pycparser-2.21 pydyf-0.5.0 tinycss2-1.2.1 weasyprint-57.1 webencodings-0.5.1 zopfli-0.2.2
 new crontab created crontab content:
 Reading package lists...
 Building dependency tree...
 Reading state information...
 jq is already the newest version (1.6-1ubuntu0.20.04.1).
-0 upgraded, 0 newly installed, 0 to remove and 120 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 117 not upgraded.
