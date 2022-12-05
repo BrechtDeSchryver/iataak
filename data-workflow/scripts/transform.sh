@@ -1,6 +1,8 @@
 #!/bin/bash
 #author=Brecht De Schryver
-
+set -o errexit
+set -o nounset
+set -o pipefail
 # Dit script neemt elk data file van een directory en zet deze om naar een csv file met de nuttige data
 DIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data"
 FILES=$(find "$DIRECTORY" -name 'data*');

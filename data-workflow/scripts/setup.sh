@@ -1,6 +1,8 @@
 #!/bin/bash
 #author=Brecht De Schryver
-
+set -o errexit
+set -o nounset
+set -o pipefail
 SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts"
 createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt"
