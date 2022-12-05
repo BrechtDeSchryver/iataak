@@ -6,7 +6,6 @@ $conn=new mysqli("localhost","www_user","letmein","www_db");
 $result=$conn->query("select * from todo_list;");
 $data=$result->fetch_all();
 ?>
-
 <table>
   <tr><th>Num</th><th>Content</th></tr>
 <?php foreach ($data as $row): ?>
