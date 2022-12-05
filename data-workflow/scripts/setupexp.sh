@@ -73,15 +73,15 @@ init(){
         unset envscriptdir
         unset envgitdir
         ;;
-  esac
-  shift
-done
-    $SCRIPTDIR="/"
-    envcheck "$envscriptdir" "$SCRIPTDIR_default" "$SCRIPTDIR"
-    echo "$SCRIPTDIR"
-    $GITLOC="/"
-    envcheck "$envgitdir" "$GITLOC_default" "$GITLOC"
-    echo "$GITLOC"
+    esac;
+    shift;
+    done;
+    $SCRIPTDIR="/";
+    envcheck "$envscriptdir" "$SCRIPTDIR_default" "$SCRIPTDIR";
+    echo "$SCRIPTDIR";
+    $GITLOC="/";
+    envcheck "$envgitdir" "$GITLOC_default" "$GITLOC";
+    echo "$GITLOC";
     if [[ ! -d "$GITLOC/logs" ]]; then
         mkdir "$GITLOC/logs";
     fi
