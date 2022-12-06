@@ -9,7 +9,10 @@ import os
 import sys
 from pandas.plotting import table
 import tabulate
+#directories
+#locatie van de csv bestanden
 csv_DIR="/home/osboxes/Desktop/git/iataak/data-workflow/Data/csv"
+#basislocatie
 gitloc="/home/osboxes/Desktop/git/iataak/data-workflow"
 #"C:/csv"
 #"C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak"

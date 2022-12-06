@@ -4,9 +4,13 @@ set -o errexit
 set -o nounset
 set -o pipefail
 #default waarden mogen aangepast worden
+    #locatie van alle scripts 
 SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts"
-GITLOC="/home/osboxes/Desktop/git/iataak/data-workflow"
+    #locatie waar de logfile terecht komt
+LOGDIR="/home/osboxes/Desktop/git/iataak/data-workflow/logs"
+    #locatie waar de data terecht komt
 DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data"
+
 #maakt een cronetab aan on files te runnen
 createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt"
@@ -57,10 +61,7 @@ init(){
             g="g"
         fi
     fi
-    if [[ ! -d "$GITLOC/logs" ]]; then
-        mkdir "$GITLOC/logs";
-    fi
-    logfile="$GITLOC/logs/setuplog.txt";
+    logfile="$LOGDIR/setuplog.txt";
     printf "setting up automatic download and upload\n" > "$logfile";
     pythonlibdownload "$logfile";
     createcrontab "$logfile";

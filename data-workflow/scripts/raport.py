@@ -4,12 +4,20 @@ import lorem
 from git import Repo
 import time
 import aspose.words as aw
-GITFILELOC="/home/osboxes/Desktop/git/iataak"
+#DIRECTORY LOCATIONS aanapsbaar
 GITLOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
+#location van het markdown rapport
 MDLOC = GITLOC + "/raport.md"
+#location van de csvimages
 IMAGELOC= GITLOC + "/csvimage"
+#location van de tabels
 TABELSLOC= GITLOC + "/tabels"
+#location van het pdf rapport
 PDFLOC = GITLOC + "/rapport.pdf"
+
+#enkel aan te passen als je github acces hebt
+GITFILELOC="/home/osboxes/Desktop/git/iataak"
+
 def aanmakenrapport():
     with open(MDLOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
