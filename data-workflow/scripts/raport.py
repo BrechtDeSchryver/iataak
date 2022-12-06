@@ -6,12 +6,12 @@ import time
 import aspose.words as aw
 GITFILELOC="/home/osboxes/Desktop/git/iataak"
 GITLOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
-READMELOC = GITLOC + "/README.md"
+MDLOC = GITLOC + "/raport.md"
 IMAGELOC= GITLOC + "/csvimage"
 TABELSLOC= GITLOC + "/tabels"
 PDFLOC = GITLOC + "/rapport.pdf"
 def aanmakenrapport():
-    with open(READMELOC, 'w') as f:
+    with open(MDLOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
         f.write('### Auteurs:\n')
         f.write(' - [Brecht De Schryver]\n')
@@ -58,7 +58,7 @@ def aanmakenrapport():
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
-    mddoc = aw.Document(READMELOC)
+    mddoc = aw.Document(MDLOC)
     save_options = aw.saving.PdfSaveOptions()
     save_options.compliance = aw.saving.PdfCompliance.PDF17
     mddoc.save(PDFLOC, save_options)
