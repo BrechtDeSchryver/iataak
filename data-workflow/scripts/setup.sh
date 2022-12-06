@@ -6,13 +6,14 @@ set -o pipefail
 #default waarden mogen aangepast worden
 SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts"
 GITLOC="/home/osboxes/Desktop/git/iataak/data-workflow"
+DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data"
 #maakt een cronetab aan on files te runnen
 createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt"
     touch "$tempfile"
     pythonV=$(python3 -V | cut -d" " -f2 |  cut -d"." -f1,2)
     {
-    printf "*/5 * * * * %s/automated.sh\n" "$SCRIPTDIR"
+    printf "*/5 * * * * %s/automated.sh %s\n" "$SCRIPTDIR" "$DATADIRECTORY"
     printf "0 */1 * * * /bin/python%s %s/analyse.py\n" "$pythonV" "$SCRIPTDIR"
     printf "0 */1 * * * /bin/python%s %s/raport%s.py\n" "$pythonV" "$SCRIPTDIR" "$g"
     } >> "$tempfile"

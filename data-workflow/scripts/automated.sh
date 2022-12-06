@@ -3,9 +3,7 @@
 set -o errexit
 set -o nounset
 set -o pipefail
-#default waarden mogen aangepast worden
-DIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data"
-#URL van de site
+#URL van de site niet aanpassen
 URL="https://data.stad.gent/api/records/1.0/search/?dataset=bezetting-parkeergarages-real-time&q=&rows=20&facet=name&facet=lastupdate&facet=description&facet=categorie"
 newcsv(){
     name=$1;
@@ -77,8 +75,14 @@ fillcsv(){
     echo "$TOTAALOCCUPATION;$TIMESTAMP">>"$DIRECTORY/csv/totaal/totaal.csv";
 }
 init(){
+    DIRECTORY=$1;
     search;
     fillcsv "$NEWFILE";
 
 }
-init;
+if [ "$#" -eq "1" ]; then
+    init $1;
+else 
+    echo "Geef een directory op als eerste argument";
+    exit 1;
+fi

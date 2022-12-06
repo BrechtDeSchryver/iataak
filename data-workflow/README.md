@@ -1,16 +1,20 @@
-## Rapport van de IATAAK
+# Automatic data-workflow opdracht
 ### Auteurs:
  - [Brecht De Schryver]
-### Inhoudsopgave:
+## Inhoudsopgave:
  - [Inleiding](#inleiding)
  - [Uitvoering](#uitvoering)
  - [Resultaten](#resultaten)
  - [Conclusie](#conclusie)
-### Inleiding
-In dit rapport wordt de uitvoering van de IATAAK beschreven. voor deze taak maakte ik gebruik van het dataportaal van stad gent. Ik nam een kijkje naar de data van real time beztting van parkeergarages in Gent
-### Uitvoering
-1.1
- - tijdens dit deel werd de data gescraped
+## Inleiding
+In deze opdracht verzamelde ik van een publieke API data en transformeerde die in enkele vormen zodat we ze kunnen analyseren in een rapport.
+## Uitvoering
+Om deze analyse zelf te runnen om analyse te kunnen doen over een andere tijdspanne heb je een aantal zaken nodig:
+-een werkende bash script omgeving(vm/os/...)
+-git
+-een versie van python3 in de bash script omgeving
+
+### 
 [bash script](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/webscraper.sh)
 
 1.2
