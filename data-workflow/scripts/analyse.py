@@ -55,6 +55,7 @@ def plot_data(df,name):
     ax.xaxis_date()
     plt.xlabel('timestamp')
     plt.ylabel('amount of cars')
+    plt.xticks(x[::288], rotation=90)
     plt.plot(x, y, label="occupation")
     plt.plot(x, df['totalcapacity'], label="max_occupation")
     plt.title(name)
