@@ -47,8 +47,10 @@ def plot_gemiddeldebezetting(dataset):
         y.append(df['occupation'].mean())
     plt.xlabel('name')
     plt.ylabel('gemiddelde bezetting')
+    plt.xticks(rotation=90)
     plt.bar(x, y)
     plt.title('gemiddelde bezetting per parking')
+    plt.tight_layout()
     plt.savefig(gitloc+'/csvimage/gemiddelde.csv.png')
 #maakt een graph van de een dataset
 def plot_data(df,name):
@@ -65,34 +67,35 @@ def plot_data(df,name):
     ax.xaxis_date()
     plt.xlabel('timestamp')
     plt.ylabel('amount of cars')
-    plt.xticks(range(0, len(x), 288),x[::288],rotation=30)
+    plt.xticks(range(0, len(x), 288),x[::288],rotation=90)
     plt.plot(x, y, label="occupation")
     plt.plot(x, df['totalcapacity'], label="max_occupation")
     plt.title(name)
+    plt.tight_layout()
     plt.savefig(gitloc+'/csvimage/' + name + '.png')
     plt.cla()
     plt.clf()
 
-#def plot_totalebeztting(df,name):
-#    
-#    converted_dates = []
-#    print(df.keys())
-#    for time in df['timestamp']:
-#        time = str(time)
-#        time = time[:4] + '-' + time[4:6] + '-' + time[6:8] + ' ' + time[8:10] + ':' + time[10:12] + ':' + time[12:14]
-#        converted_dates.append(time)
-#    x = converted_dates
-#    y = df['occupation']
-#    xfmt=md.DateFormatter('%Y-%m-%d %H:%M:%S')
-#    ax=plt.gca()
-#    ax.xaxis.set_major_formatter(xfmt)
-#    ax.xaxis_date()
-#    plt.xlabel('timestamp')
-#    plt.ylabel('amount of cars')
-#    plt.plot(x, y, label="occupation")
-#    plt.title(name)
-#    plt.savefig('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage/' + name + '.png')
-#    plt.show()
+def plot_totalebeztting(df,name):
+    
+    converted_dates = []
+    for time in df['timestamp']:
+        time = str(time)
+        time = time[:4] + '-' + time[4:6] + '-' + time[6:8] + ' ' + time[8:10] + ':' + time[10:12] + ':' + time[12:14]
+        converted_dates.append(time)
+    x = converted_dates
+    y = df.index
+    xfmt=md.DateFormatter('%Y-%m-%d %H:%M:%S')
+    ax=plt.gca()
+    ax.xaxis.set_major_formatter(xfmt)
+    ax.xaxis_date()
+    plt.xlabel('timestamp')
+    plt.ylabel('amount of cars')
+    plt.xticks(range(0, len(x), 288),x[::288],rotation=90)
+    plt.plot(x, y, label="occupation")
+    plt.title(name)
+    plt.tight_layout()
+    plt.savefig(gitloc +'/csvimage/' + name + '.png')
 
 #maakt een tabel van de totale capaciteit
 def plot_table_totaal(dataset):
@@ -118,14 +121,13 @@ def plot_gemiddeldeopeningstijd(dataset):
     col_names = ['name', 'percentage open'] 
     with open(gitloc +'/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
-        aw.save(gitloc +'/tabels/gemiddeldeopeningstijd.png')
 #runned de functies
 def main():
     dataset = read_data(csv_DIR)
     totaal = read_data_totaal(csv_DIR)
     for name,df in dataset.items():
         plot_data(df,name)
-    #plot_totalebeztting(totaal,"totaal")
+    plot_totalebeztting(totaal,"totaal")
     plot_gemiddeldeopeningstijd(dataset)
     plot_table_totaal(dataset)
     plot_table_betalenparking(dataset)
