@@ -25,7 +25,7 @@ createcrontab(){
     } >> "$tempfile"
     printf "new crontab created crontab content:\n" >>"$1";
     printf "%s\n" "$(cat $tempfile)" >>"$1";
-    crontab "$tempfile";
+    { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
     rm "$tempfile";
 }
 #download python packages
