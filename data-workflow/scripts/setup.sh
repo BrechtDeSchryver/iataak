@@ -7,41 +7,43 @@ set -o pipefail
 
 #default waarden mogen aangepast worden
     #locatie van alle scripts 
-SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts"
+SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts";
     #locatie waar de logfile terecht komt
-LOGDIR="/home/osboxes/Desktop/git/iataak/data-workflow/logs"
+LOGDIR="/home/osboxes/Desktop/git/iataak/data-workflow/logs";
     #locatie waar de data terecht komt
-DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data"
+DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data";
 
 #maakt een cronetab aan on files te runnen
 createcrontab(){
-    tempfile="$SCRIPTDIR/tempcron.txt"
-    touch "$tempfile"
-    pythonV=$(python3 -V | cut -d" " -f2 |  cut -d"." -f1,2)
+    tempfile="$SCRIPTDIR/tempcron.txt";
+    touch "$tempfile";
+    pythonV=$(python3 -V | cut -d" " -f2 |  cut -d"." -f1,2);
     {
-    printf "*/5 * * * * %s/automated.sh %s\n" "$SCRIPTDIR" "$DATADIRECTORY"
-    printf "0 */1 * * * /bin/python%s %s/analyse.py\n" "$pythonV" "$SCRIPTDIR"
-    printf "0 */1 * * * /bin/python%s %s/raport%s.py\n" "$pythonV" "$SCRIPTDIR" "$g"
+    printf "*/5 * * * * %s/automated.sh %s\n" "$SCRIPTDIR" "$DATADIRECTORY";
+    printf "0 */1 * * * /bin/python%s %s/analyse.py\n" "$pythonV" "$SCRIPTDIR";
+    printf "0 */1 * * * /bin/python%s %s/raport%s.py\n" "$pythonV" "$SCRIPTDIR" "$g";
     } >> "$tempfile"
-    printf "new crontab created crontab content:\n" >>$1
-    printf "%s" >>$1 
-    crontab "$tempfile"
-    rm "$tempfile"
+    printf "new crontab created crontab content:\n" >>"$1";
+    printf "%s" "$tempfile" >>"$1";
+    crontab "$tempfile";
+    rm "$tempfile";
 }
 #download python packages
 pythonlibdownload(){
     printf "downloading pythong libraries:\n" >> "$logfile"
-    pip install lorem >> "$1"
-    pip install pandas >> "$1"
-    pip install matplotlib >> "$1"
-    pip install datetime >> "$1"
-    pip install tabulate >> "$1"
-    pip install aspose-words >> "$1"
+    {
+    pip install lorem;
+    pip install pandas; 
+    pip install matplotlib; 
+    pip install datetime;
+    pip install tabulate;
+    pip install aspose-words; 
+    } >> "$1"
 }
 #download jq package
 setupjq(){
     printf "Sudo user password word gevraagd voor het instaleren van de jq package die gebruikt word in dit script\n";
-    sudo apt install jq >> "$1" 2> /dev/null;
+    sudo apt install jq | sudo tee -a "$1" > /dev/null;
 }
 #init function
 init(){
@@ -76,7 +78,7 @@ init(){
 }
 #check of er een argument is meegegeven om errors te voorkomen
 if [ "$#" -eq "1" ]; then
-    init $1;
+    init "$1";
 else 
     init
 fi
