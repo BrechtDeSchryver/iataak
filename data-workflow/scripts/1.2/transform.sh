@@ -3,9 +3,13 @@
 set -o errexit
 set -o nounset
 set -o pipefail
-# Dit script neemt elk data file van een directory en zet deze om naar een csv file met de nuttige data
-DIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data"
-FILES=$(find "$DIRECTORY" -name 'data*');
+# Dit script neemt elk data file van een directory en zet deze om naar een csv file met de nuttige datapunten
+
+#data directory
+DIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data";
+
+#Maakt de directory aan waar de csv files in komen als deze niet bestaat.
+#Maakt een csv file aan met de naam van de parkeergarage en slaat deze op in de directory als deze nog niet bestaat.
 newcsv(){
     name=$1;
     if [[ ! -d "$DIRECTORY/csv" ]]; then
@@ -15,6 +19,8 @@ newcsv(){
     touch "$csv";
     printf "availablecapacity;freeparking;isopennow;occupation;totalcapacity;timestamp\n">>"$csv";
 }
+#Maakt een totaal directory aan als deze nog niet bestaat.
+#Maakt een csv file aan met de naam totaal en slaat deze op in de directory als deze nog niet bestaat.
 newtotaalcsv(){
     rm -rf "$DIRECTORY/csv/totaal/totaal.csv";
     name="totaal";
@@ -25,30 +31,42 @@ newtotaalcsv(){
     touch "$csv";
     printf "occupation;timestamp\n">>"$csv";
 }
-remewcsv(){
+#Verwijdert de csv directory en maakt deze opnieuw aan.
+renewcsv(){
     rm -rf "$DIRECTORY/csv";
     mkdir "$DIRECTORY/csv";
 }
+#Haalt de data uit elk data file en zet deze om naar een csv file. verdere uitleg in de code.
 init(){
+    #alle data files in de directory
+    FILES=$(find "$DIRECTORY" -name 'data*');
+    #installeert jq als deze nog niet geinstalleerd is
     printf "Sudo user password word gevraagd voor het instaleren van de jq package die gebruikt word in dit script\n";
     sudo apt install jq;
-    remewcsv;
+    renewcsv;
     newtotaalcsv;
     for file in $FILES 
     do
+        #totaal aantal bezettingen van alle parkeergarages
         TOTAALOCCUPATION=0;
+        #timestamp van de data file
         TIMESTAMP=$(echo "$file" | tr -dc '0-9');
+        #namen van alle parkings (perl veranderd de spaties in underscores)
         parkings=$(jq .records[].fields.name "$file" | perl -pe 's{("[^"]+")}{($x=$1)=~s/ /_/g;$x}ge');
         for parking in $parkings
         do  
+            #verwijdert de " uit de naam van de parkeergarage
             newparking=$(echo "$parking" | sed 's/"//g');
+            #controleerd of de csv file van de parkeergarage al bestaat
             if [[ ! -e "$DIRECTORY/csv/$newparking.csv" ]]; then
                 newcsv "$newparking";
             fi
         done
+        #haalt de data uit elk data file en zet deze om naar een csv file
         allparkingdata=$(jq '.records[].fields | {name,isopennow,freeparking,availablecapacity,occupation,totalcapacity,lastupdate}' <"$file");
         OIFS="$IFS";
         IFS='}';
+        #For loop om elk field te plaatsen in een csv file
         for parkingdata in $allparkingdata
         do
             IFS=$OIFS;

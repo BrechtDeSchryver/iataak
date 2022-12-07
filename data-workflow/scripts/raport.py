@@ -1,9 +1,12 @@
 #author=Brecht De Schryver
+#imports voor het script
 import os
 import lorem
 from git import Repo
 import time
 import aspose.words as aw
+#maakt een rapport aan met alle data gegenereerd van de analyse
+
 #DIRECTORY LOCATIONS aanapsbaar
 GITLOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
 #location van het markdown rapport
@@ -18,6 +21,7 @@ PDFLOC = GITLOC + "/rapport.pdf"
 #enkel aan te passen als je github acces hebt
 GITFILELOC="/home/osboxes/Desktop/git/iataak"
 
+#maakt een rapport aan met alle data gegenereerd van de analyse
 def aanmakenrapport():
     with open(MDLOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
@@ -70,13 +74,16 @@ def aanmakenrapport():
     save_options = aw.saving.PdfSaveOptions()
     save_options.compliance = aw.saving.PdfCompliance.PDF17
     mddoc.save(PDFLOC, save_options)
+#pushed nieuwe rapport en data naar github
 def gitpush():
     repo = Repo(GITFILELOC)
     repo.git.add('--all')
     repo.index.commit('automated commit of rapport')
     origin = repo.remote(name='origin')
     origin.push()
+#maakt rapport aan
 def main():
     aanmakenrapport()
+#als het bestand wordt gerunned runned het de main functie
 if __name__ == '__main__':
     main()

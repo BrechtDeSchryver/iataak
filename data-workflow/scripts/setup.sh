@@ -3,6 +3,8 @@
 set -o errexit
 set -o nounset
 set -o pipefail
+# Dit script installeerd alle benodigde packages en maakt een cronetab aan om de scripts te runnen
+
 #default waarden mogen aangepast worden
     #locatie van alle scripts 
 SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts"
@@ -41,10 +43,13 @@ setupjq(){
     printf "Sudo user password word gevraagd voor het instaleren van de jq package die gebruikt word in dit script\n";
     sudo apt install jq >> "$1" 2> /dev/null;
 }
+#init function
 init(){
     #geen github acces 
     g="";
+    #check of er een argument is meegegeven
     if [ "$#" -eq "1" ]; then
+        #check of het argument help is en geeft dan de help tekst
         if [ "$1" == "-h" ] || [ "$1" == "-?" ] || [ "$1" == "--help" ]; then
             echo "Usage: setup.sh [OPTIONS] "
             echo "Dit script instaleerd de benodigde software en maakt een crontab aan"
@@ -56,17 +61,20 @@ init(){
             echo " dit laat toe de data meteen op github te posten"
             exit 0
         fi
+        #check of het argument -git is en zet dan de g variabele op g zodat de rapporten naar github worden gepost
         if [ "$1" == "-git" ]; then 
             #github acces 
             g="g"
         fi
     fi
+    #maakt een log file aan om alle output van het script in te zetten
     logfile="$LOGDIR/setuplog.txt";
     printf "setting up automatic download and upload\n" > "$logfile";
     pythonlibdownload "$logfile";
     createcrontab "$logfile";
     setupjq "$logfile";
 }
+#check of er een argument is meegegeven om errors te voorkomen
 if [ "$#" -eq "1" ]; then
     init $1;
 else 

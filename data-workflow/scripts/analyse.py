@@ -1,4 +1,5 @@
 #author=Brecht De Schryver
+#imports voor het script
 import matplotlib.pyplot as plt
 import matplotlib.dates as md
 import datetime as dt
@@ -9,14 +10,16 @@ import os
 import sys
 from pandas.plotting import table
 import tabulate
+#maakt de anaylse van de csv bestanden
+
 #directories
 #locatie van de csv bestanden
 csv_DIR="/home/osboxes/Desktop/git/iataak/data-workflow/Data/csv"
 #basislocatie
 gitloc="/home/osboxes/Desktop/git/iataak/data-workflow"
-#"C:/csv"
-#"C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak"
-# Read the data
+
+
+# Haalt de totaaldata uit csv en zet ze om naar een panda dataset
 def read_data_totaal(csv_DIR):
     totaal_dir=os.path.join(csv_DIR, "totaal")
     for file in os.listdir(totaal_dir):
@@ -25,6 +28,7 @@ def read_data_totaal(csv_DIR):
             df.sort_values(by=['timestamp'], inplace=True)
             dataset=df
     return dataset
+# Haalt de data uit csv en zet ze om naar een panda dataset
 def read_data(csv_DIR):
     dataset={}
     for file in os.listdir(csv_DIR):
@@ -33,6 +37,7 @@ def read_data(csv_DIR):
             df.sort_values(by=['timestamp'], inplace=True)
             dataset[file]=df
     return dataset
+# maakt een plot van de gemiddelde bezetting
 def plot_gemiddeldebezetting(dataset):
     x=[]
     y=[]
@@ -44,6 +49,7 @@ def plot_gemiddeldebezetting(dataset):
     plt.bar(x, y)
     plt.title('gemiddelde bezetting per parking')
     plt.savefig(gitloc+'/csvimage/gemiddelde.csv.png')
+#maakt een graph van de een dataset
 def plot_data(df,name):
     converted_dates = []
     for time in df['timestamp']:
@@ -86,6 +92,8 @@ def plot_data(df,name):
 #    plt.title(name)
 #    plt.savefig('C:/Users/brech/OneDrive/Desktop/bash scripts opdracht/iataak/csvimage/' + name + '.png')
 #    plt.show()
+
+#maakt een tabel van de totale capaciteit
 def plot_table_totaal(dataset):
     data=[]
     for name,item in dataset.items():
@@ -93,6 +101,7 @@ def plot_table_totaal(dataset):
     col_names = ['name', 'totalcapacity']
     with open(gitloc+'/tabels/totaalcapaciteit.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+#maakt een tabel van de gratis parkeringen
 def plot_table_betalenparking(dataset):
     data=[]
     for name,item in dataset.items():
@@ -100,6 +109,7 @@ def plot_table_betalenparking(dataset):
     col_names = ['name', 'freeparking']
     with open(gitloc + '/tabels/gratisparking.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+#maakt een tabel van de gemiddelde openingstijd
 def plot_gemiddeldeopeningstijd(dataset):
     data=[]
     for name,item in dataset.items():
@@ -107,6 +117,7 @@ def plot_gemiddeldeopeningstijd(dataset):
     col_names = ['name', 'percentage open'] 
     with open(gitloc +'/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+#runned de functies
 def main():
     dataset = read_data(csv_DIR)
     totaal = read_data_totaal(csv_DIR)
@@ -117,5 +128,7 @@ def main():
     plot_table_totaal(dataset)
     plot_table_betalenparking(dataset)
     plot_gemiddeldebezetting(dataset)
+
+#als het bestand wordt gerunned runned het de main functie
 if __name__ == '__main__':
     main()
