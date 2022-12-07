@@ -10,6 +10,7 @@ import os
 import sys
 from pandas.plotting import table
 import tabulate
+import aspose.words as aw
 #maakt de anaylse van de csv bestanden
 
 #directories
@@ -101,6 +102,7 @@ def plot_table_totaal(dataset):
     col_names = ['name', 'totalcapacity']
     with open(gitloc+'/tabels/totaalcapaciteit.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+        aw.save(gitloc + '/tabels/totaalcapaciteit.png')
 #maakt een tabel van de gratis parkeringen
 def plot_table_betalenparking(dataset):
     data=[]
@@ -109,6 +111,7 @@ def plot_table_betalenparking(dataset):
     col_names = ['name', 'freeparking']
     with open(gitloc + '/tabels/gratisparking.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+        aw.save(gitloc + '/tabels/gratisparking.png')
 #maakt een tabel van de gemiddelde openingstijd
 def plot_gemiddeldeopeningstijd(dataset):
     data=[]
@@ -117,6 +120,7 @@ def plot_gemiddeldeopeningstijd(dataset):
     col_names = ['name', 'percentage open'] 
     with open(gitloc +'/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+        aw.save(gitloc +'/tabels/gemiddeldeopeningstijd.png')
 #runned de functies
 def main():
     dataset = read_data(csv_DIR)

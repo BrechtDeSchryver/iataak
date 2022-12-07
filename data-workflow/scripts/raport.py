@@ -4,22 +4,16 @@ import os
 import lorem
 from git import Repo
 import time
-import aspose.words as aw
 #maakt een rapport aan met alle data gegenereerd van de analyse
 
 #DIRECTORY LOCATIONS aanapsbaar
-GITLOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
+BASELOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
 #location van het markdown rapport
-MDLOC = GITLOC + "/raport.md"
+MDLOC = BASELOC + "/raport.md"
 #location van de csvimages
-IMAGELOC= GITLOC + "/csvimage"
+IMAGELOC= BASELOC + "/csvimage"
 #location van de tabels
-TABELSLOC= GITLOC + "/tabels"
-#location van het pdf rapport
-PDFLOC = GITLOC + "/rapport.pdf"
-
-#enkel aan te passen als je github acces hebt
-GITFILELOC="/home/osboxes/Desktop/git/iataak"
+TABELSLOC= BASELOC + "/tabels"
 
 #maakt een rapport aan met alle data gegenereerd van de analyse
 def aanmakenrapport():
@@ -70,10 +64,7 @@ def aanmakenrapport():
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
-    mddoc = aw.Document(MDLOC)
-    save_options = aw.saving.PdfSaveOptions()
-    save_options.compliance = aw.saving.PdfCompliance.PDF17
-    mddoc.save(PDFLOC, save_options)
+GITFILELOC = "" #wordt niet gebruikt in deze file
 #pushed nieuwe rapport en data naar github
 def gitpush():
     repo = Repo(GITFILELOC)

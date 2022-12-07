@@ -17,7 +17,7 @@ TABELSLOC= GITLOC + "/tabels"
 #location van het pdf rapport
 PDFLOC = GITLOC + "/rapport.pdf"
 
-#enkel aan te passen als je github acces hebt
+#locatie van de file .git
 GITFILELOC="/home/osboxes/Desktop/git/iataak"
 
 #maakt een rapport aan met alle data gegenereerd van de analyse en pushed het naar github

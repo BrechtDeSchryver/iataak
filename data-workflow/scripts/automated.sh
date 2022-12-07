@@ -98,7 +98,12 @@ init(){
 }
 #controleerd of er een argument is meegegeven om errors te voorkomen
 if [ "$#" -eq "1" ]; then
-    init "$1";
+    if [ -d "$1" ]; then
+        init "$1";
+    else
+        echo "Geef een bestaande directory op als eerste argument";
+        exit 1;
+    fi
 else 
     echo "Geef een directory op als eerste argument";
     exit 1;
