@@ -8,7 +8,7 @@ from raport import aanmakenrapport, gitpush
 
 #locatie van de file .git
 GITFILELOC="/home/osboxes/Desktop/git/iataak"
-pagesgitloc="/home/osboxes/Desktop/git/iataak/data-workflow/iataakBrechtDeSchryver.github.io"
+pagesgitloc="/home/osboxes/Desktop/git/iataak/data-workflow/BrechtDeSchryver.github.io"
 def main():
     aanmakenrapport(pagesgitloc,pages=True)
     gitpush(GITFILELOC)
