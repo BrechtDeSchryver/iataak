@@ -68,7 +68,7 @@ def aanmakenrapport(pagesloc="",pages=False):
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
         if pages==True:
-            shutil.copy2(MDLOC,pagesloc + '/index.html')
+            shutil.copy2(MDLOC,pagesloc + '/README.md')
 #pushed nieuwe rapport en data naar github
 def gitpush(gitfile):
     repo = Repo(gitfile)
