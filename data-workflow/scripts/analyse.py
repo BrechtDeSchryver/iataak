@@ -96,6 +96,9 @@ def plot_totalebeztting(df,name):
     plt.title(name)
     plt.tight_layout()
     plt.savefig(gitloc +'/csvimage/' + name + '.png')
+    plt.cla()
+    plt.clf()
+
 
 #maakt een tabel van de totale capaciteit
 def plot_table_totaal(dataset):
