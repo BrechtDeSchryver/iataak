@@ -24,7 +24,7 @@ createcrontab(){
     printf "0 */1 * * * /bin/python%s %s/raport%s.py\n" "$pythonV" "$SCRIPTDIR" "$g";
     } >> "$tempfile"
     printf "new crontab created crontab content:\n" >>"$1";
-    printf "%s" "$tempfile" >>"$1";
+    printf "%s\n" "$(cat $tempfile)" >>"$1";
     crontab "$tempfile";
     rm "$tempfile";
 }
@@ -43,7 +43,7 @@ pythonlibdownload(){
 #download jq package
 setupjq(){
     printf "Sudo user password word gevraagd voor het instaleren van de jq package die gebruikt word in dit script\n";
-    sudo apt install jq | sudo tee -a "$1" > /dev/null;
+    sudo apt-get install jq | sudo tee -a "$1" > /dev/null 2> /dev/null;
 }
 #init function
 init(){

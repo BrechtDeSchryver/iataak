@@ -42,7 +42,7 @@ init(){
     FILES=$(find "$DIRECTORY" -name 'data*');
     #installeert jq als deze nog niet geinstalleerd is
     printf "Sudo user password word gevraagd voor het instaleren van de jq package die gebruikt word in dit script\n";
-    sudo apt install jq;
+    sudo apt-get install jq;
     renewcsv;
     newtotaalcsv;
     for file in $FILES 
