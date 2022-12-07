@@ -102,7 +102,6 @@ def plot_table_totaal(dataset):
     col_names = ['name', 'totalcapacity']
     with open(gitloc+'/tabels/totaalcapaciteit.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
-        aw.Document(gitloc + '/tabels/totaalcapaciteit.txt').save(gitloc + '/tabels/totaalcapaciteit.xlsx')
 #maakt een tabel van de gratis parkeringen
 def plot_table_betalenparking(dataset):
     data=[]
@@ -111,7 +110,6 @@ def plot_table_betalenparking(dataset):
     col_names = ['name', 'freeparking']
     with open(gitloc + '/tabels/gratisparking.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
-        aw.Document(gitloc + '/tabels/gratisparking.txt').save(gitloc + '/tabels/gratisparking.xlsx')
 #maakt een tabel van de gemiddelde openingstijd
 def plot_gemiddeldeopeningstijd(dataset):
     data=[]
@@ -120,7 +118,7 @@ def plot_gemiddeldeopeningstijd(dataset):
     col_names = ['name', 'percentage open'] 
     with open(gitloc +'/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
-        aw.Document(gitloc +'/tabels/gemiddeldeopeningstijd.txt').save(gitloc +'/tabels/gemiddeldeopeningstijd.xlsx')
+        aw.save(gitloc +'/tabels/gemiddeldeopeningstijd.png')
 #runned de functies
 def main():
     dataset = read_data(csv_DIR)
