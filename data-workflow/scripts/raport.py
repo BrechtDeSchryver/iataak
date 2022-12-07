@@ -55,7 +55,7 @@ def aanmakenrapport(pagesloc="",pages=False):
         for file in os.listdir(IMAGELOC):
             f.write("## grafiek van " + str(file.split(".",2)[0]) + "\n")
             f.write(lorem.paragraph()+"\n")
-            f.write('![image]('"https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/csvimage/"+file+')\n')
+            f.write('![image]('"./csvimage/"+file+')\n')
         for file in os.listdir(TABELSLOC):
             f.write("## tabel van " + str(file.split(".",1)[0]) + "\n")
             f.write(lorem.paragraph()+"\n")

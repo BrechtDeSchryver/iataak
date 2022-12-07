@@ -12,6 +12,7 @@ GITFILELOC="/home/osboxes/Desktop/git/iataak"
 pagesgitloc="/home/osboxes/Desktop/git/iataak/data-workflow/BrechtDeSchryver.github.io"
 def main():
     aanmakenrapport(pagesgitloc,pages=True)
+    shutil.rmtree(pagesgitloc+'/csvimage')
     shutil.copytree(GITFILELOC+'/data-workflow/csvimage',pagesgitloc+'/csvimage')
     gitpush(GITFILELOC)
     gitpush(pagesgitloc)
