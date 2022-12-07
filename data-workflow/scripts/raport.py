@@ -14,6 +14,8 @@ MDLOC = BASELOC + "/raport.md"
 IMAGELOC= BASELOC + "/csvimage"
 #location van de tabels
 TABELSLOC= BASELOC + "/tabels"
+#locatie van de file .git
+GITFILELOC="/home/osboxes/Desktop/git/iataak"
 
 #maakt een rapport aan met alle data gegenereerd van de analyse
 def aanmakenrapport():
@@ -64,7 +66,6 @@ def aanmakenrapport():
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
-GITFILELOC = "" #wordt niet gebruikt in deze file
 #pushed nieuwe rapport en data naar github
 def gitpush():
     repo = Repo(GITFILELOC)

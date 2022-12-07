@@ -6,21 +6,6 @@ import time
 from raport import aanmakenrapport, gitpush
 #maakt een rapport aan met alle data gegenereerd van de analyse en pushed het naar github
 
-#DIRECTORY LOCATIONS aanapsbaar
-GITLOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
-#location van het markdown rapport
-MDLOC = GITLOC + "/raport.md"
-#location van de csvimages
-IMAGELOC= GITLOC + "/csvimage"
-#location van de tabels
-TABELSLOC= GITLOC + "/tabels"
-#location van het pdf rapport
-PDFLOC = GITLOC + "/rapport.pdf"
-
-#locatie van de file .git
-GITFILELOC="/home/osboxes/Desktop/git/iataak"
-
-#maakt een rapport aan met alle data gegenereerd van de analyse en pushed het naar github
 def main():
     aanmakenrapport()
     gitpush()
