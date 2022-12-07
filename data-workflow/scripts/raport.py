@@ -4,21 +4,21 @@ import os
 import lorem
 from git import Repo
 import time
+import shutil
 #maakt een rapport aan met alle data gegenereerd van de analyse
 
 #DIRECTORY LOCATIONS aanapsbaar
 BASELOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
 #location van het markdown rapport
-MDLOC = BASELOC + "/raport.md"
+MDLOC = BASELOC + "/rapport.md"
 #location van de csvimages
 IMAGELOC= BASELOC + "/csvimage"
 #location van de tabels
 TABELSLOC= BASELOC + "/tabels"
-#locatie van de file .git
-GITFILELOC="/home/osboxes/Desktop/git/iataak"
+
 
 #maakt een rapport aan met alle data gegenereerd van de analyse
-def aanmakenrapport():
+def aanmakenrapport(pagesloc="",pages=False):
     with open(MDLOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
         f.write('### Auteurs:\n')
@@ -67,9 +67,11 @@ def aanmakenrapport():
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
+        if pages==True:
+            shutil.copy2(MDLOC,pagesloc)
 #pushed nieuwe rapport en data naar github
-def gitpush():
-    repo = Repo(GITFILELOC)
+def gitpush(gitfile):
+    repo = Repo(gitfile)
     repo.git.add('--all')
     repo.index.commit('automated commit of rapport')
     origin = repo.remote(name='origin')
