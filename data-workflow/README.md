@@ -71,5 +71,3 @@ na het ingeven van de 3 directories bovenaan het script zal het script alle nodi
 ### resultaten
 markdown:
 [rapport.md](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.md)
-pdf:
-[rapport.pdf](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.md)
