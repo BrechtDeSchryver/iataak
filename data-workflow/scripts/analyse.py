@@ -16,7 +16,7 @@ import aspose.words as aw
 #directories
 #locatie van de csv bestanden
 csv_DIR="/home/osboxes/Desktop/git/iataak/data-workflow/Data/csv"
-#basislocatie
+#locatie waar je wilt dat de images worden opgeslagen
 gitloc="/home/osboxes/Desktop/git/iataak/data-workflow"
 
 
@@ -124,8 +124,15 @@ def plot_gemiddeldeopeningstijd(dataset):
     col_names = ['name', 'percentage open'] 
     with open(gitloc +'/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
+#checkt of de mappen bestaan en maakt ze anders aan
+def checkdatalocations():
+    if not os.path.exists(gitloc + '/csvimage'):
+        os.makedirs(gitloc + '/csvimage')
+    if not os.path.exists(gitloc + '/tabels'):
+        os.makedirs(gitloc + '/tabels')
 #runned de functies
 def main():
+    checkdatalocations()
     dataset = read_data(csv_DIR)
     totaal = read_data_totaal(csv_DIR)
     for name,df in dataset.items():

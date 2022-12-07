@@ -69,5 +69,7 @@ als je dit file wilt runnen moet je als argument de locatie van de Data meegeven
 ### [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh)
 na het ingeven van de 3 directories bovenaan het script zal het script alle nodige python libraries downloaden met pip als ook de python package jq aangezien deze niet standaard is bij linuxMint.
 ### resultaten
+github-pages:
+[RAPPORT](BrechtDeSchryver.github.io)
 markdown:
 [rapport.md](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.md)
