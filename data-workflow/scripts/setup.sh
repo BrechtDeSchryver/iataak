@@ -7,11 +7,12 @@ set -o pipefail
 # maakt een logfile in de locatie waar het script wordt uitgevoerd.
 
 #default waarden mogen aangepast worden
-    #locatie van alle scripts 
+#locatie van alle scripts 
 SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts";
-    #locatie waar de data terecht komt
+#locatie waar de data terecht komt
 DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data";
-
+#locatie waar je wilt dat de grafieken,tabellen en het rapport terecht komen
+BASEDIR="/home/osboxes/Desktop/git/iataak/data-workflow"
 #maakt een cronetab aan on files te runnen
 createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt";
@@ -19,8 +20,8 @@ createcrontab(){
     pythonV=$(python3 -V | cut -d" " -f2 |  cut -d"." -f1,2);
     {
     printf "*/5 * * * * %s/automated.sh %s\n" "$SCRIPTDIR" "$DATADIRECTORY";
-    printf "0 */1 * * * /bin/python%s %s/analyse.py\n" "$pythonV" "$SCRIPTDIR";
-    printf "0 */1 * * * /bin/python%s %s/raport%s.py\n" "$pythonV" "$SCRIPTDIR" "$g";
+    printf "0 */1 * * * /bin/python%s %s/analyse.py %s %s\n" "$pythonV" "$SCRIPTDIR" "$DATADIRECTORY/csv" "$BASEDIR";
+    printf "0 */1 * * * /bin/python%s %s/raport%s.py %s\n" "$pythonV" "$SCRIPTDIR" "$g" "$BASEDIR";
     } >> "$tempfile"
     printf "new crontab created crontab content:\n" >>"$1";
     printf "%s\n" "$(cat $tempfile)" >>"$1";

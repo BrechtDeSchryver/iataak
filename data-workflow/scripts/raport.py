@@ -6,21 +6,19 @@ from git import Repo
 import time
 import shutil
 import markdown
+import sys
 #maakt een rapport aan met alle data gegenereerd van de analyse
 
-#DIRECTORY LOCATIONS aanapsbaar
-BASELOC = "/home/osboxes/Desktop/git/iataak/data-workflow"
-#location van het markdown rapport
-MDLOC = BASELOC + "/rapport.md"
-#location van de csvimages
-IMAGELOC= BASELOC + "/csvimage"
-#location van de tabels
-TABELSLOC= BASELOC + "/tabels"
-#location van de htmlrapport
-HTMLLOC= BASELOC + "/rapport.html"
-
 #maakt een rapport aan met alle data gegenereerd van de analyse
-def aanmakenrapport(pagesloc="",pages=False):
+def aanmakenrapport(baseloc,pagesloc="",pages=False,):
+    #location van het markdown rapport
+    MDLOC = baseloc + "/rapport.md"
+    #location van de csvimages
+    IMAGELOC= baseloc + "/csvimage"
+    #location van de tabels
+    TABELSLOC= baseloc + "/tabels"
+    #location van de htmlrapport
+    HTMLLOC= baseloc + "/rapport.html"
     with open(MDLOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
         f.write('### Auteurs:\n')
@@ -61,7 +59,15 @@ def gitpush(gitfile):
     origin.push()
 #maakt rapport aan
 def main():
-    aanmakenrapport()
+    try:
+        var=sys.argv
+        baseloc=var[1]
+    except:
+        print("geen argumenten meegegeven")
+        print("gebruik:")
+        print("arg1: parent directory grafieken en tabels")
+        exit()
+    aanmakenrapport(baseloc)
 #als het bestand wordt gerunned runned het de main functie
 if __name__ == '__main__':
     main()

@@ -11,14 +11,8 @@ import sys
 from pandas.plotting import table
 import tabulate
 import aspose.words as aw
+import sys
 #maakt de anaylse van de csv bestanden
-
-#directories
-#locatie van de csv bestanden
-csv_DIR="/home/osboxes/Desktop/git/iataak/data-workflow/Data/csv"
-#locatie waar je wilt dat de images worden opgeslagen
-baseloc="/home/osboxes/Desktop/git/iataak/data-workflow"
-
 
 # Haalt de totaaldata uit csv en zet ze om naar een panda dataset
 def read_data_totaal(csv_DIR):
@@ -39,7 +33,7 @@ def read_data(csv_DIR):
             dataset[file]=df
     return dataset
 # maakt een plot van de gemiddelde bezetting
-def plot_gemiddeldebezetting(dataset):
+def plot_gemiddeldebezetting(dataset,baseloc):
     x=[]
     y=[]
     for name,df in dataset.items():
@@ -53,7 +47,7 @@ def plot_gemiddeldebezetting(dataset):
     plt.tight_layout()
     plt.savefig(baseloc+'/csvimage/gemiddelde.csv.png')
 #maakt een graph van de een dataset
-def plot_data(df,name):
+def plot_data(df,name,baseloc):
     converted_dates = []
     for time in df['timestamp']:
         time = str(time)
@@ -76,7 +70,7 @@ def plot_data(df,name):
     plt.cla()
     plt.clf()
 
-def plot_totalebeztting(df,name):
+def plot_totalebeztting(df,name,baseloc):
     
     converted_dates = []
     for time in df['timestamp']:
@@ -101,7 +95,7 @@ def plot_totalebeztting(df,name):
 
 
 #maakt een tabel van de totale capaciteit
-def plot_table_totaal(dataset):
+def plot_table_totaal(dataset,baseloc):
     data=[]
     for name,item in dataset.items():
         data.append([name,item['totalcapacity'].iloc[0]])
@@ -109,7 +103,7 @@ def plot_table_totaal(dataset):
     with open(baseloc+'/tabels/totaalcapaciteit.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
 #maakt een tabel van de gratis parkeringen
-def plot_table_betalenparking(dataset):
+def plot_table_betalenparking(dataset,baseloc):
     data=[]
     for name,item in dataset.items():
         data.append([name,item['freeparking'].iloc[0]])
@@ -117,7 +111,7 @@ def plot_table_betalenparking(dataset):
     with open(baseloc + '/tabels/gratisparking.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
 #maakt een tabel van de gemiddelde openingstijd
-def plot_gemiddeldeopeningstijd(dataset):
+def plot_gemiddeldeopeningstijd(dataset,baseloc):
     data=[]
     for name,item in dataset.items():
         data.append([name,item['isopennow'].mean()])
@@ -125,23 +119,33 @@ def plot_gemiddeldeopeningstijd(dataset):
     with open(baseloc +'/tabels/gemiddeldeopeningstijd.txt', 'w') as f:
         f.write(tabulate.tabulate(data, headers=col_names, tablefmt='csv'))
 #checkt of de mappen bestaan en maakt ze anders aan
-def checkdatalocations():
+def checkdatalocations(baseloc):
     if not os.path.exists(baseloc + '/csvimage'):
         os.makedirs(baseloc + '/csvimage')
     if not os.path.exists(baseloc + '/tabels'):
         os.makedirs(baseloc + '/tabels')
 #runned de functies
 def main():
-    checkdatalocations()
+    try :
+        var=sys.argv
+        csv_DIR = var[1]
+        baseloc = var[2]
+    except:
+        print("geen argumenten meegegeven")
+        print("gebruik:")
+        print("arg1: locatie van de csv bestanden")
+        print("arg2: locatie van de output")
+        exit()
+    checkdatalocations(baseloc)
     dataset = read_data(csv_DIR)
     totaal = read_data_totaal(csv_DIR)
     for name,df in dataset.items():
-        plot_data(df,name)
-    plot_totalebeztting(totaal,"totaal")
-    plot_gemiddeldeopeningstijd(dataset)
-    plot_table_totaal(dataset)
-    plot_table_betalenparking(dataset)
-    plot_gemiddeldebezetting(dataset)
+        plot_data(df,name,baseloc)
+    plot_totalebeztting(totaal,"totaal",baseloc)
+    plot_gemiddeldeopeningstijd(dataset,baseloc)
+    plot_table_totaal(dataset,baseloc)
+    plot_table_betalenparking(dataset,baseloc)
+    plot_gemiddeldebezetting(dataset,baseloc)
 
 #als het bestand wordt gerunned runned het de main functie
 if __name__ == '__main__':
