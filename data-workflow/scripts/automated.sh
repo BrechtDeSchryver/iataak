@@ -101,8 +101,8 @@ if [ "$#" -eq "1" ]; then
     if [ -d "$1" ]; then
         init "$1";
     else
-        echo "Geef een bestaande directory op als eerste argument";
-        exit 1;
+        mkdir "$1";
+        init "$1";
     fi
 else 
     echo "Geef een directory op als eerste argument";

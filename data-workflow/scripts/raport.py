@@ -5,6 +5,7 @@ import lorem
 from git import Repo
 import time
 import shutil
+import markdown
 #maakt een rapport aan met alle data gegenereerd van de analyse
 
 #DIRECTORY LOCATIONS aanapsbaar
@@ -15,7 +16,8 @@ MDLOC = BASELOC + "/rapport.md"
 IMAGELOC= BASELOC + "/csvimage"
 #location van de tabels
 TABELSLOC= BASELOC + "/tabels"
-
+#location van de htmlrapport
+HTMLLOC= BASELOC + "/rapport.html"
 
 #maakt een rapport aan met alle data gegenereerd van de analyse
 def aanmakenrapport(pagesloc="",pages=False):
@@ -46,6 +48,10 @@ def aanmakenrapport(pagesloc="",pages=False):
         f.write("Goodbye now")
         if pages==True:
             shutil.copy2(MDLOC,pagesloc + '/index.md')
+        with open(MDLOC) as md:
+            html = markdown.markdown(md.read())
+            with open(HTMLLOC, 'w') as htmlfile:
+                htmlfile.write(html)
 #pushed nieuwe rapport en data naar github
 def gitpush(gitfile):
     repo = Repo(gitfile)

@@ -38,12 +38,13 @@ pythonlibdownload(){
     pip install datetime;
     pip install tabulate;
     pip install aspose-words; 
-    } >> "$1"
+    pip install GitPython;
+    } >> "$1" 2> /dev/null;
 }
 #download jq package
 setupjq(){
     printf "Sudo user password word gevraagd voor het instaleren van de jq package die gebruikt word in dit script\n";
-    sudo apt-get install jq | sudo tee -a "$1" > /dev/null 2> /dev/null;
+    sudo apt-get install jq;
 }
 #init function
 init(){
