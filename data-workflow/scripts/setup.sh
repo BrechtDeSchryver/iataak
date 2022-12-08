@@ -25,7 +25,11 @@ createcrontab(){
     } >> "$tempfile"
     printf "new crontab created crontab content:\n" >>"$1";
     printf "%s\n" "$(cat $tempfile)" >>"$1";
-    { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
+    if ["$(crontab -l)"=="no crontab for $(whoami)"]; then
+        crontab "$tempfile";
+    else
+        { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
+    fi
     rm "$tempfile";
 }
 #download python packages
@@ -39,6 +43,7 @@ pythonlibdownload(){
     pip install tabulate;
     pip install aspose-words; 
     pip install GitPython;
+    pip install markdown;
     } >> "$1" 2> /dev/null;
 }
 #download jq package
