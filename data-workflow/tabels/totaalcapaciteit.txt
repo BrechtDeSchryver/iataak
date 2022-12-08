@@ -1,0 +1,14 @@
+name                            totalcapacity
+----------------------------  ---------------
+B-Park_Gent_Sint-Pieters.csv              500
+Savaanstraat.csv                          525
+Sint-Pietersplein.csv                     698
+Tolhuis.csv                               150
+Sint-Michiels.csv                         304
+Ledeberg.csv                              500
+Reep.csv                                  489
+Vrijdagmarkt.csv                          605
+Getouw.csv                                340
+B-Park_Dampoort.csv                        60
+Ramen.csv                                 260
+Dok_noord.csv                             550
