@@ -95,7 +95,7 @@ init(){
             read DATADIRECTORY
             echo "geef de directory waar de grafieken, tabellen en het rapport terecht komen: "
             read BASEDIR
-            if [ ! -d "$SCRIPTDIR" ] || [ ! -d "$DATADIRECTORY"] || [! -d "$BASEDIR"]; then
+            if [ ! -d "$SCRIPTDIR" ] || [ ! -d "$DATADIRECTORY" ] || [! -d "$BASEDIR" ]; then
                 echo "directory bestaat niet"
                 exit 69
             fi
