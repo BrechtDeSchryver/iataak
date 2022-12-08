@@ -22,7 +22,8 @@ Om deze analyse zelf te runnen om analyse te kunnen doen over een andere tijdspa
 
 eerst en vooral clone je mijn github repo waar je nu op zit 
 
-wanneer dit gebeurd is ga je naar het script [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) en pas je de nodige Directories aan zoals beschreven staat in commentaar van het script. Vervolgens run je het setup script. als je wilt weten wat het script doet kan je verderlezen of -h meegeven voor wat informatie. 
+wanneer dit gebeurd is ga je naar het script [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) en pas je de nodige Directories aan zoals beschreven staat in commentaar van het script. Vervolgens run je het setup script. als je wilt weten wat het script doet kan je verderlezen of -h meegeven voor wat informatie. als je liever niet de standaardwaarden aanpast kan je het script runnen met het argument -dir.
+je wordt vervolgens geprompt om de directories in te geven deze worden dan eenmalig gebruikt om het script te runnen en de setup te doen.
 
 Je wordt geprompt je sudo wachtwoord te geven voor de installatie van jq. als je dit liever niet doet omdat je dit niet vertrouwd download jq dan zelf en run het script en geef het argument -n mee.
 
