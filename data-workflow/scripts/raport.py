@@ -47,9 +47,8 @@ def aanmakenrapport(baseloc,pagesloc="",pages=False,):
         if pages==True:
             shutil.copy2(MDLOC,pagesloc + '/index.md')
         with open(MDLOC) as md:
-            html = markdown.markdown(md.read())
             with open(HTMLLOC, 'w') as htmlfile:
-                htmlfile.write(html)
+                htmlfile.write(markdown.markdown(md.read()))
 #pushed nieuwe rapport en data naar github
 def gitpush(gitfile):
     repo = Repo(gitfile)
