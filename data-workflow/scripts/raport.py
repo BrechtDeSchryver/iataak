@@ -39,19 +39,19 @@ def aanmakenrapport(baseloc,pagesloc="",pages=False,):
             f.write(lorem.paragraph()+"\n")
             with open(os.path.join(TABELSLOC, file)) as f2:
                 f.write('\n')
-                f.write("test")#f2.read())
+                f.write(f2.read())
                 f.write('\n')
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
-        if pages==True:
-            shutil.copy2(MDLOC,pagesloc + '/index.md')
-        with open(MDLOC) as md:
-            with open(HTMLLOC, 'w') as htmlfile:
-                html=markdown.markdown(md.read())
-                print(html)
-                htmlfile.write(html)
-                htmlfile.close()
+    if pages==True:
+        shutil.copy2(MDLOC,pagesloc + '/index.md')
+    with open(MDLOC) as md:
+        with open(HTMLLOC, 'w') as htmlfile:
+            html=markdown.markdown(md.read())
+            print(html)
+            htmlfile.write(html)
+            htmlfile.close()
     
 #pushed nieuwe rapport en data naar github
 def gitpush(gitfile):
