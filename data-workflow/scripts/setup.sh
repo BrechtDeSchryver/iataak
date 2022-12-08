@@ -51,6 +51,8 @@ setupjq(){
 init(){
     #geen github acces 
     g="";
+    #download jq package
+    nodownload="false";
     #check of er een argument is meegegeven
     if [ "$#" -eq "1" ]; then
         #check of het argument help is en geeft dan de help tekst
@@ -60,24 +62,37 @@ init(){
             echo "voor het ophalen, analyseren en rapporteren van de data"
             echo "data word opgehaald van data.stad.gent"
             echo "OPTIONS:"
-            echo "  -h, -?, --help: toont deze melding"
-            echo " -git gebruik je als je toegang hebt tot de github repo"
-            echo " dit laat toe de data meteen op github te posten"
+            echo "          -h, -?, --help: toont deze melding"
+            echo "          -git gebruik je als je toegang hebt tot de github repo"
+            echo "          dit laat toe de data meteen op github te posten"
+            echo "          -n download de jq package niet"
             exit 0
         fi
         #check of het argument -git is en zet dan de g variabele op g zodat de rapporten naar github worden gepost
-        if [ "$1" == "-git" ]; then 
-            #github acces 
-            g="g"
-        fi
     fi
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -git)
+            g="g"
+            shift 
+            ;;
+            -n)
+            #download jq package niet
+            nodownload="true"
+            *)    # niet bestaand argument 
+            shift 
+            ;;
+        esac
+    done
     #maakt een log file aan om alle output van het script in te zetten
     logfile="$SCRIPTDIR/setuplog.txt";
     printf "setting up automatic download and upload\n" > "$logfile";
     pythonlibdownload "$logfile";
     createcrontab "$logfile";
-    setupjq "$logfile";
-}
+    if [ "$nodownload" != "true" ]; then
+        setupjq "$logfile";
+    fi
+    }
 #check of er een argument is meegegeven om errors te voorkomen
 if [ "$#" -eq "1" ]; then
     init "$1";

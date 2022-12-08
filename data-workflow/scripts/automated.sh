@@ -67,7 +67,6 @@ fillcsv(){
         newtotaalcsv;
     fi
     allparkingdata=$(jq '.records[].fields | {name,isopennow,freeparking,availablecapacity,occupation,totalcapacity,lastupdate}' <"$file");
-    echo "$allparkingdata";
     OIFS="$IFS";
     IFS='}';
     for parkingdata in $allparkingdata
