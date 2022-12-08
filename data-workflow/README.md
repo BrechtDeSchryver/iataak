@@ -29,8 +29,6 @@ wanneer dit gebeurd is ga je naar het script [setup.sh](https://github.com/Brech
 
 Je wordt geprompt je sudo wachtwoord te geven voor de installatie van jq.
 
-je zal ook nog in [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py) en in [raport.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/report.py) enkele directories moeten instellen deze vindt je opnieuw in de code bovenaan terug. 
-
 dit zorgt ervoor dat elke 5 minuten [automated.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/automated.sh) runned en elk uur de python files [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py) en [raport.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/report.py). Hierdoor wordt elk uur een nieuwe analyse van de data gemaakt en in een raport file gestoken te vinden op [rapport.html](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.html)
 
 ### extra : toegang tot git 
@@ -67,18 +65,27 @@ als je in dit file de directory van de data meegeeft zal het in deze directory e
  - dit genereerd een SC2001 warning die niet valt op te lossen omdat de sed code te complex is zie [hier](https://www.shellcheck.net/wiki/SC2001)
 
 ### [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py)
-in dit script worden een aantal analyses gemaakt van de data die opgeslagen worden in verschillende locaties die je moet aanpassen in de file. het maakt grafieken en tabellen.
+in dit script worden een aantal analyses gemaakt van de data en daar worden grafieken en tabellen van gemaakt.
 
+Als je dit bestand apart wilt runnen zal je twee argumenten moeten meegeven aan de file 
+
+arg1:locatie van de csv bestanden
+
+arg2:locatie van de output(images en tabellen)
 ### [raport.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/raport.py)
-maakt de rapporten aan in filelocations die je moet aanpassen in de file.
+maakt een raport aan van de verkregen data.
 
+Als je dit bestand apart wilt runnen zal je een argumenten moeten meegeven aan de file 
+
+arg1:locatie van de output van [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py) (argument 2 van [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py))
 ### [raportg.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/raportg.py)
-doet hetzelfde als raport.py maar commit ook de aangepaste data naar een github repo.
+doet hetzelfde als raport.py maar commit ook de aangepaste data naar een github repo en naar een githubpage.
 
+als je dit bestand wilt runnen zal je de twee .git file locaties moeten aanpassen in de code bovenaan.
 ### [automated.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/automated.sh)
 is een combinatie van webscraper.sh en transform.sh het haalt de nodige data op en slaat ze meteen getransformeerd op in de juiste csv files.
 
-als je dit file wilt runnen moet je als argument de locatie van de Data meegeven. Dit moet omdat het niet de bedoeling is om dit zelf te runnen maar automatisch runned met het gebruik van setup.sh
+als je dit bestand wilt runnen moet je als argument de locatie van de Data meegeven. Dit moet omdat het niet de bedoeling is om dit zelf te runnen maar automatisch runned met het gebruik van setup.sh
 ### [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh)
 na het ingeven van de 3 directories bovenaan het script zal het script alle nodige python libraries downloaden met pip als ook de python package jq aangezien deze niet standaard is bij linuxMint.
 ### resultaten
@@ -86,6 +93,7 @@ na het ingeven van de 3 directories bovenaan het script zal het script alle nodi
 
 [RAPPORT](https://BrechtDeSchryver.github.io)
 
--markdown:
+-html van markdown:
+resultaat wanneer je het zou runnen zonder github.
 
-[rapport.md](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.md)
+[rapport.html](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.html)
