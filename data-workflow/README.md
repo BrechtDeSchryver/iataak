@@ -14,26 +14,31 @@ Om deze analyse zelf te runnen om analyse te kunnen doen over een andere tijdspa
 
 -een werkende bash script omgeving(vm/os/...)
 
--git
+-git(sudo apt-get git(op linuxMint))
 
--een versie van python3 in de bash script omgeving
+-een versie van python3 in de bash script omgeving(sudo apt-get python3.9(op LinuxMint))
 
--voor de python versie een geinstalleerde pip
+-voor de python versie een geinstalleerde pip(sudo apt-get python3-pip(op LinuxMint))
 
--de fucntie crontab -e runnen voor je begint aan het script als je nog geen crontab hebt gemaakt
+-als er nog nooit een crontab is gemaakt in je bash script omgeving run je het bashcomando "crontab -e" 
+wanneer het vraagt om een editor te kiezen kies je jou meest gebruikte. je mag ook meteen het bestand waar je in terechtkomt sluiten
 
 eerst en vooral clone je mijn github repo waar je nu op zit 
 
-wanneer dit gebeurd is ga je naar het script [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) en pas je de nodige Directories aan zoals beschreven staat in commentaar. Vervolgens run je het setup script. als je wilt weten wat het script doet kan je verderlezen of -h meegeven voor wat informatie. Je wordt geprompt je sudo wachtwoord te geven voor de installatie van jq.
+wanneer dit gebeurd is ga je naar het script [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) en pas je de nodige Directories aan zoals beschreven staat in commentaar van het script. Vervolgens run je het setup script. als je wilt weten wat het script doet kan je verderlezen of -h meegeven voor wat informatie. 
+
+Je wordt geprompt je sudo wachtwoord te geven voor de installatie van jq.
 
 je zal ook nog in [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py) en in [raport.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/report.py) enkele directories moeten instellen deze vindt je opnieuw in de code bovenaan terug. 
 
-dit zorgt ervoor dat elke 5 minuten [automated.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/automated.sh) runned en elk uur de python files [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py) en [raport.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/report.py). Hierdoor wordt elk uur een nieuwe analyse van de data gemaakt en in een raport file gestoken te vinden op [rapport.md](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.md) en [rapport.pdf](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.pdf) (je vindt deze terug op de locatie die je zelf hebt ingesteld in raport.py)
+dit zorgt ervoor dat elke 5 minuten [automated.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/automated.sh) runned en elk uur de python files [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py) en [raport.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/report.py). Hierdoor wordt elk uur een nieuwe analyse van de data gemaakt en in een raport file gestoken te vinden op [rapport.html](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.html)
 
 ### extra : toegang tot git 
 wanneer je toegang hebt tot een git directory met deze files aanwezig (een nieuwe repo met een clone van mijn repo of mijn repo) kan je aan [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) optie -git meegeven deze zal ervoor zorgen dat al je files meteen in git worden geupload elke keer dat een raport gegenereerd wordt.
 
 dit verwacht ook dat je of een ssh link naar je github hebt of gebruik maakt van credentials.store(!!slaat in plaintext op)
+
+Wanneer je dit doet wordt je file ook meteen geupload naar een github-page te vinden op [rapport](BrechtDeSchryver.github.io)
 ## Data
 
 De API die ik gebruik is een API over parkeercijfers van autos in bepaalde locaties in gent. te vinden hier [API](https://data.stad.gent/api/records/1.0/search/?dataset=bezetting-parkeergarages-real-time&q=&rows=20&facet=name&facet=lastupdate&facet=description&facet=categorie)
