@@ -103,6 +103,9 @@ init(){
     done
     #maakt een log file aan om alle output van het script in te zetten
     logfile="$SCRIPTDIR/setuplog.txt";
+    echo $(ls -1 "$SCRIPTDIR" | grep -x "automated.sh")
+    echo $(ls -1 "$SCRIPTDIR" | grep -x "automated.py")
+    echo $(ls -1 "$SCRIPTDIR" | grep -x "raport$g.py")
     if ls -1 "$SCRIPTDIR" | grep -x "automated.sh" > /dev/null 2>&1; then
         printf "automated.sh script found in %s\n" "$SCRIPTDIR" > "$logfile";
         if ls -1 "$SCRIPTDIR" | grep -x "automated.py" > /dev/null 2>&1; then
