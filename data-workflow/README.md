@@ -38,7 +38,7 @@ wanneer je toegang hebt tot een git directory met deze files aanwezig (een nieuw
 
 dit verwacht ook dat je of een ssh link naar je github hebt of gebruik maakt van credentials.store(!!slaat in plaintext op)
 
-Wanneer je dit doet wordt je file ook meteen geupload naar een github-page te vinden op [rapport](BrechtDeSchryver.github.io)
+Wanneer je dit doet wordt je file ook meteen geupload naar een github-page te vinden op [rapport](BrechtDeSchryver.github.io). Als je dit zelf wilt doen met je eigen github en githubpage dan zal je de .git file van je repo en je .git file van je pages moeten ingeven in [raportg.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/reportg.py)
 ## Data
 
 De API die ik gebruik is een API over parkeercijfers van autos in bepaalde locaties in gent. te vinden hier [API](https://data.stad.gent/api/records/1.0/search/?dataset=bezetting-parkeergarages-real-time&q=&rows=20&facet=name&facet=lastupdate&facet=description&facet=categorie)
