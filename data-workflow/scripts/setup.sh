@@ -15,14 +15,6 @@ DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data";
 BASEDIR="/home/osboxes/Desktop/git/iataak/data-workflow"
 #maakt een cronetab aan on files te runnen
 createcrontab(){
-    croncheck="$SCRIPTDIR/check.txt";
-    touch "$croncheck";
-    #subshell voodoo magic
-    (
-    crontab -l 2> "$croncheck";
-    #shell checked enkel laatse exit value van een subshell code hierboven geeft een error maar we hebbe deze nodig.
-    echo "void to trick errexit"
-    ) > /dev/null 2>&1;
     tempfile="$SCRIPTDIR/tempcron.txt";
     touch "$tempfile";
     pythonV=$(python3 -V | cut -d" " -f2 |  cut -d"." -f1,2);
@@ -33,7 +25,8 @@ createcrontab(){
     } >> "$tempfile"
     printf "new crontab created crontab content:\n" >>"$1";
     printf "%s\n" "$(cat $tempfile)" >>"$1";
-    if grep -x "^no crontab for $(whoami)$" $croncheck; then
+    #check of er al een crontab is gemaakt.
+    if crontab -l > /dev/null 2>&1; then
         printf "no crontab found creating new crontab\n" >> "$1"
         crontab "$tempfile";
     else
@@ -41,7 +34,6 @@ createcrontab(){
         { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
     fi
     rm "$tempfile";
-    rm "$croncheck";
 }
 #download python packages
 pythonlibdownload(){
