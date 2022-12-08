@@ -27,11 +27,11 @@ createcrontab(){
     printf "%s\n" "$(cat $tempfile)" >>"$1";
     #check of er al een crontab is gemaakt.
     if crontab -l > /dev/null 2>&1; then
-        printf "no crontab found creating new crontab\n" >> "$1"
-        crontab "$tempfile";
-    else
         printf "crontab found appending new cronjobs\n" >> "$1"
         { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
+    else
+        printf "no crontab found creating new crontab\n" >> "$1"
+        crontab "$tempfile";
     fi
     rm "$tempfile";
 }
