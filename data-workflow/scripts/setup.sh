@@ -15,6 +15,9 @@ DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data";
 BASEDIR="/home/osboxes/Desktop/git/iataak/data-workflow"
 #maakt een cronetab aan on files te runnen
 createcrontab(){
+    echo $SCRIPTDIR
+    echo $DATADIRECTORY
+    echo $BASEDIR
     tempfile="$SCRIPTDIR/tempcron.txt";
     touch "$tempfile";
     pythonV=$(python3 -V | cut -d" " -f2 |  cut -d"." -f1,2);
@@ -73,6 +76,8 @@ init(){
             echo "          -git gebruik je als je toegang hebt tot de github repo"
             echo "          dit laat toe de data meteen op github te posten"
             echo "          -n download de jq package niet"
+            echo "          -dir prompt je om de locatie van de scripts, data en de output te geven"
+            echo "          het script zal dan de default waarden overschrijven en deze directories gebruiken"
             exit 0
         fi
         #check of het argument -git is en zet dan de g variabele op g zodat de rapporten naar github worden gepost
@@ -82,6 +87,11 @@ init(){
             -git) g="g" 
             shift ;;
             -n) nodownload="true"
+            shift ;;
+            -dir) 
+            echo "geef de directory waar de scripts staan:" | read SCRIPTDIR
+            echo "geef de directory waar de data terecht komt:" | read DATADIRECTORY
+            echo "geef de directory waar de grafieken, tabellen en het rapport terecht komen:" | read BASEDIR
             shift ;;
             *) 
             shift ;;

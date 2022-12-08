@@ -20,9 +20,6 @@ Om deze analyse zelf te runnen om analyse te kunnen doen over een andere tijdspa
 
 -voor de python versie een geinstalleerde pip(sudo apt-get python3-pip(op LinuxMint))
 
--als er nog nooit een crontab is gemaakt in je bash script omgeving run je het bashcomando "crontab -e" 
-wanneer het vraagt om een editor te kiezen kies je jou meest gebruikte. je mag ook meteen het bestand waar je in terechtkomt sluiten
-
 eerst en vooral clone je mijn github repo waar je nu op zit 
 
 wanneer dit gebeurd is ga je naar het script [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) en pas je de nodige Directories aan zoals beschreven staat in commentaar van het script. Vervolgens run je het setup script. als je wilt weten wat het script doet kan je verderlezen of -h meegeven voor wat informatie. 
