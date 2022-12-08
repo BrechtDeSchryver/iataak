@@ -106,6 +106,17 @@ init(){
     done
     #maakt een log file aan om alle output van het script in te zetten
     logfile="$SCRIPTDIR/setuplog.txt";
+    if ls -d -f "$SCRIPTDIR" | grep -q "automated.sh"; then
+        printf "automated.sh script found in %s\n" "$SCRIPTDIR" > "$logfile";
+    elif ls -d -f "$SCRIPTDIR" | grep -q "automated.py"; then
+        printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
+    elif ls -d -f "$SCRIPTDIR" | grep -q "raport$g.py"; then
+        printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile"; 
+    else 
+        printf "automated.sh, automated.py of raport$g.py script niet gevonden in %s\n" "$SCRIPTDIR";
+        echo "gelieve de juiste script directory mee te geven met het -dir argument of in de setup.sh file"
+        exit 1;
+    fi
     printf "setting up automatic download and upload\n" > "$logfile";
     pythonlibdownload "$logfile";
     createcrontab "$logfile";
