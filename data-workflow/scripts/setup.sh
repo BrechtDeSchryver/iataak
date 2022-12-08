@@ -17,6 +17,7 @@ BASEDIR="/home/osboxes/Desktop/git/iataak/data-workflow"
 createcrontab(){
     croncheck="$SCRIPTDIR/check.txt";
     touch "$croncheck";
+    #subshell voodoo magic
     (
     crontab -l 2> "$croncheck";
     #shell checked enkel laatse exit value van een subshell code hierboven geeft een error maar we hebbe deze nodig.
