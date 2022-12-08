@@ -106,11 +106,11 @@ init(){
     done
     #maakt een log file aan om alle output van het script in te zetten
     logfile="$SCRIPTDIR/setuplog.txt";
-    if ls -d -f "$SCRIPTDIR" | grep -q "automated.sh"; then
+    if ls -1 "$SCRIPTDIR" | grep "automated.sh"; then
         printf "automated.sh script found in %s\n" "$SCRIPTDIR" > "$logfile";
-    elif ls -d -f "$SCRIPTDIR" | grep -q "automated.py"; then
+    elif ls -1 "$SCRIPTDIR" | grep "automated.py"; then
         printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
-    elif ls -d -f "$SCRIPTDIR" | grep -q "raport$g.py"; then
+    elif ls -1 "$SCRIPTDIR" | grep "raport$g.py"; then
         printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile"; 
     else 
         printf "automated.sh, automated.py of raport$g.py script niet gevonden in %s\n" "$SCRIPTDIR";
