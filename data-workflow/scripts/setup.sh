@@ -89,9 +89,12 @@ init(){
             -n) nodownload="true"
             shift ;;
             -dir) 
-            echo "geef de directory waar de scripts staan:" | read SCRIPTDIR
-            echo "geef de directory waar de data terecht komt:" | read DATADIRECTORY
-            echo "geef de directory waar de grafieken, tabellen en het rapport terecht komen:" | read BASEDIR
+            echo "geef de directory waar de scripts staan: "
+            read SCRIPTDIR
+            echo "geef de directory waar de data terecht komt: "
+            read DATADIRECTORY
+            echo "geef de directory waar de grafieken, tabellen en het rapport terecht komen: "
+            read BASEDIR
             shift ;;
             *) 
             shift ;;
