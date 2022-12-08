@@ -27,7 +27,7 @@ eerst en vooral clone je mijn github repo waar je nu op zit
 
 wanneer dit gebeurd is ga je naar het script [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) en pas je de nodige Directories aan zoals beschreven staat in commentaar van het script. Vervolgens run je het setup script. als je wilt weten wat het script doet kan je verderlezen of -h meegeven voor wat informatie. 
 
-Je wordt geprompt je sudo wachtwoord te geven voor de installatie van jq.
+Je wordt geprompt je sudo wachtwoord te geven voor de installatie van jq. als je dit liever niet doet omdat je dit niet vertrouwd download jq dan zelf en run het script en geef het argument -n mee.
 
 dit zorgt ervoor dat elke 5 minuten [automated.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/automated.sh) runned en elk uur de python files [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py) en [raport.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/report.py). Hierdoor wordt elk uur een nieuwe analyse van de data gemaakt en in een raport file gestoken te vinden op [rapport.html](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/rapport.html)
 
@@ -43,13 +43,21 @@ De API die ik gebruik is een API over parkeercijfers van autos in bepaalde locat
 Dit geeft een hoop data waarvan we enkel de data van verschillende parkeerlocaties gaan ophalen de data die we ophalen is:
 -naam 
 -of de locatie nu open is
+
 -of het parkeren nu gratis is
+
 -de capaciteit
+
 -de maximumcapaciteit
+
 -de occupatie 
+
 -een timestamp van de tijd wanneer het werd opgehaald
+
 ook wordt er van elke api call een totaal aangemaakt met:
+
 -de totale occupatie
+
 -een timestamp
 
 De Dataset die je terug ziet in de rapporten of in [dir](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/Data) is opgenomen data van de periode 29-11-2022 tot en met 6-11-2022
