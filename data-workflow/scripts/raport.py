@@ -39,9 +39,9 @@ def aanmakenrapport(baseloc,pagesloc="",pages=False,):
             f.write(lorem.paragraph()+"\n")
             with open(os.path.join(TABELSLOC, file)) as f2:
                 f.write('\n')
-                f.write("test")#f2.read())
+                f.write("test")
+                test=f2.read()
                 f.write('\n\n')
-                
         f.write('### Conclusie\n')
         f.write(lorem.paragraph()+"\n")
         f.write("Goodbye now")
