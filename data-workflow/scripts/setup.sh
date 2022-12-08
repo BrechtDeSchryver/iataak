@@ -17,6 +17,9 @@ BASEDIR="/home/osboxes/Desktop/git/iataak/data-workflow"
 createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt";
     touch "$tempfile";
+    croncheck = "$SCRIPTDIR/check.txt"
+    touch "$croncheck";
+    crontab -l 2> "$croncheck" 
     pythonV=$(python3 -V | cut -d" " -f2 |  cut -d"." -f1,2);
     {
     printf "*/5 * * * * %s/automated.sh %s\n" "$SCRIPTDIR" "$DATADIRECTORY";
@@ -25,8 +28,15 @@ createcrontab(){
     } >> "$tempfile"
     printf "new crontab created crontab content:\n" >>"$1";
     printf "%s\n" "$(cat $tempfile)" >>"$1";
-    { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
+    if [cat "$croncheck" == "no crontab for $(whoami)" ]; then
+        printf "no crontab found creating new crontab\n" >> "$1"
+        crontab "$tempfile";
+    else
+        printf "crontab found appending new crontab\n" >> "$1"
+        { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
+    fi
     rm "$tempfile";
+    rm "$croncheck";
 }
 #download python packages
 pythonlibdownload(){
