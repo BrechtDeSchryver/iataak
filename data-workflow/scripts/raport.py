@@ -49,7 +49,9 @@ def aanmakenrapport(baseloc,pagesloc="",pages=False,):
         with open(MDLOC) as md:
             with open(HTMLLOC, 'w') as htmlfile:
                 html=markdown.markdown(md.read())
+                print(html)
                 htmlfile.write(html)
+                htmlfile.close()
     
 #pushed nieuwe rapport en data naar github
 def gitpush(gitfile):
