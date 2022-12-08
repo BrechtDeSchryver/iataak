@@ -11,12 +11,20 @@
 In deze opdracht verzamelde ik van een publieke API data en transformeerde die in enkele vormen zodat we ze kunnen analyseren in een rapport.
 ## Uitvoering
 Om deze analyse zelf te runnen om analyse te kunnen doen over een andere tijdspanne heb je een aantal zaken nodig:
+
 -een werkende bash script omgeving(vm/os/...)
+
 -git
+
 -een versie van python3 in de bash script omgeving
+
 -voor de python versie een geinstalleerde pip
 
-wanneer deze aanwezig zijn ga je naar het script [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) en pas je de nodige Directories aan zoals beschreven staat in commentaar. Vervolgens run je het setup script. als je wilt weten wat het script doet kan je verderlezen of -h meegeven voor wat informatie. Je wordt geprompt je sudo wachtwoord te geven voor de installatie van jq.
+-de fucntie crontab -e runnen voor je begint aan het script als je nog geen crontab hebt gemaakt
+
+eerst en vooral clone je mijn github repo waar je nu op zit 
+
+wanneer dit gebeurd is ga je naar het script [setup.sh](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/setup.sh) en pas je de nodige Directories aan zoals beschreven staat in commentaar. Vervolgens run je het setup script. als je wilt weten wat het script doet kan je verderlezen of -h meegeven voor wat informatie. Je wordt geprompt je sudo wachtwoord te geven voor de installatie van jq.
 
 je zal ook nog in [analyse.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/analyse.py) en in [raport.py](https://github.com/BrechtDeSchryver/iataak/blob/main/data-workflow/scripts/report.py) enkele directories moeten instellen deze vindt je opnieuw in de code bovenaan terug. 
 
