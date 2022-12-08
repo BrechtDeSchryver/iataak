@@ -72,16 +72,12 @@ init(){
     fi
     while [[ $# -gt 0 ]]; do
         case $1 in
-            -git)
-            g="g"
-            shift 
-            ;;
-            -n)
-            #download jq package niet
-            nodownload="true"
-            *)    # niet bestaand argument 
-            shift 
-            ;;
+            -git) g="g" 
+            shift ;;
+            -n) nodownload="true"
+            shift ;;
+            *) 
+            shift ;;
         esac
     done
     #maakt een log file aan om alle output van het script in te zetten
