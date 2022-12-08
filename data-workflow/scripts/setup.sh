@@ -25,12 +25,15 @@ createcrontab(){
     } >> "$tempfile"
     printf "new crontab created crontab content:\n" >>"$1";
     printf "%s\n" "$(cat $tempfile)" >>"$1";
-    if ["$(crontab -l)"=="no crontab for $(whoami)"]; then
+    oldcron="$scriptdir/oldcron.txt";
+    crontab -l > "$oldcron";
+    if [$oldcron=="no crontab for $(whoami)"]; then
         crontab "$tempfile";
     else
-        { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
+        { cat $oldcron; cat "$tempfile";} | sort | uniq | crontab;
     fi
     rm "$tempfile";
+    rm "$oldcron";
 }
 #download python packages
 pythonlibdownload(){
