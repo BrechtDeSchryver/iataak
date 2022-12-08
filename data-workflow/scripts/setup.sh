@@ -30,10 +30,10 @@ createcrontab(){
     printf "%s\n" "$(cat $tempfile)" >>"$1";
     if [grep "^no crontab for $(whoami)$" $croncheck ]; then
         printf "no crontab found creating new crontab\n" >> "$1"
-        crontab "$tempfile";
+        { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
     else
         printf "crontab found appending new crontab\n" >> "$1"
-        { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
+        crontab "$tempfile";
     fi
     rm "$tempfile";
     rm "$croncheck";
