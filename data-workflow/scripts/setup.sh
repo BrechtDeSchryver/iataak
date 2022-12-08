@@ -15,9 +15,6 @@ DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data";
 BASEDIR="/home/osboxes/Desktop/git/iataak/data-workflow"
 #maakt een cronetab aan on files te runnen
 createcrontab(){
-    echo $SCRIPTDIR
-    echo $DATADIRECTORY
-    echo $BASEDIR
     tempfile="$SCRIPTDIR/tempcron.txt";
     touch "$tempfile";
     pythonV=$(python3 -V | cut -d" " -f2 |  cut -d"." -f1,2);
@@ -95,7 +92,7 @@ init(){
             read DATADIRECTORY
             echo "geef de directory waar de grafieken, tabellen en het rapport terecht komen: "
             read BASEDIR
-            if [ ! -d "$SCRIPTDIR" ] || [ ! -d "$DATADIRECTORY" ] || [! -d "$BASEDIR" ]; then
+            if [ ! -d "$SCRIPTDIR" ] || [ ! -d "$DATADIRECTORY" ] || [ ! -d "$BASEDIR" ]; then
                 echo "directory bestaat niet"
                 exit 69
             fi
