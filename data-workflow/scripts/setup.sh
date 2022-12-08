@@ -109,16 +109,16 @@ init(){
     if ls -1 "$SCRIPTDIR" | grep -x "automated.sh" > /dev/null 2>&1; then
         printf "automated.sh script found in %s\n" "$SCRIPTDIR" > "$logfile";
         if ls -1 "$SCRIPTDIR" | grep -x "analyse.py" > /dev/null 2>&1; then
-            printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
+            printf "analyse.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
             if ls -1 "$SCRIPTDIR" | grep -x "raport$g.py" > /dev/null 2>&1; then
-            printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
+            printf "raport$g.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
             else 
                 printf "raport$g.py script niet gevonden in %s\n" "$SCRIPTDIR";
                 echo "gelieve de juiste script directory mee te geven met het -dir argument of in de setup.sh file"
                 exit 1;
             fi
         else 
-            printf "automated.py script niet gevonden in %s\n" "$SCRIPTDIR";
+            printf "analyse.py script niet gevonden in %s\n" "$SCRIPTDIR";
             echo "gelieve de juiste script directory mee te geven met het -dir argument of in de setup.sh file"
             exit 1;
         fi 
