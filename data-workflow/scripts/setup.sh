@@ -3,13 +3,12 @@
 set -o errexit
 set -o nounset
 set -o pipefail
-# Dit script installeerd alle benodigde packages en maakt een cronetab aan om de scripts te runnen
+# Dit script installeerd alle benodigde packages en maakt een cronetab aan om de scripts te runnen 
+# maakt een logfile in de locatie waar het script wordt uitgevoerd.
 
 #default waarden mogen aangepast worden
     #locatie van alle scripts 
 SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts";
-    #locatie waar de logfile terecht komt
-LOGDIR="/home/osboxes/Desktop/git/iataak/data-workflow/logs";
     #locatie waar de data terecht komt
 DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data";
 
@@ -76,7 +75,7 @@ init(){
         fi
     fi
     #maakt een log file aan om alle output van het script in te zetten
-    logfile="$LOGDIR/setuplog.txt";
+    logfile="$SCRIPTDIR/setuplog.txt";
     printf "setting up automatic download and upload\n" > "$logfile";
     pythonlibdownload "$logfile";
     createcrontab "$logfile";
