@@ -9,10 +9,11 @@ set -o pipefail
 #default waarden mogen aangepast worden
 #locatie van alle scripts 
 SCRIPTDIR="/home/osboxes/Desktop/git/iataak/data-workflow/scripts";
-#locatie waar de data terecht komt
+#locatie waar de data terecht moet komen
 DATADIRECTORY="/home/osboxes/Desktop/git/iataak/data-workflow/Data";
 #locatie waar je wilt dat de grafieken,tabellen en het rapport terecht komen
 BASEDIR="/home/osboxes/Desktop/git/iataak/data-workflow"
+
 #maakt een cronetab aan on files te runnen
 createcrontab(){
     tempfile="$SCRIPTDIR/tempcron.txt";
@@ -88,9 +89,9 @@ init(){
             -dir) 
             echo "geef de directory waar de scripts staan: "
             read SCRIPTDIR
-            echo "geef de directory waar de data terecht komt: "
+            echo "geef de directory waar de data terecht moet komen: "
             read DATADIRECTORY
-            echo "geef de directory waar de grafieken, tabellen en het rapport terecht komen: "
+            echo "geef de directory waar de grafieken, tabellen en het rapport terecht moeten komen: "
             read BASEDIR
             if [ ! -d "$SCRIPTDIR" ] || [ ! -d "$DATADIRECTORY" ] || [ ! -d "$BASEDIR" ]; then
                 echo "directory bestaat niet"
