@@ -25,12 +25,9 @@ createcrontab(){
     } >> "$tempfile"
     printf "new crontab created crontab content:\n" >>"$1";
     printf "%s\n" "$(cat $tempfile)" >>"$1";
-    oldcron="$scriptdir/oldcron.txt";
-    crontab -l > "$oldcron";
-    if [$oldcron=="no crontab for $(whoami)"]; then
-        crontab "$tempfile";
+    crontab -e;
     else
-        { cat $oldcron; cat "$tempfile";} | sort | uniq | crontab;
+        { crontab -l; cat "$tempfile";} | sort | uniq | crontab;
     fi
     rm "$tempfile";
     rm "$oldcron";
