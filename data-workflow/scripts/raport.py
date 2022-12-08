@@ -49,7 +49,6 @@ def aanmakenrapport(baseloc,pagesloc="",pages=False,):
         with open(MDLOC) as md:
             with open(HTMLLOC, 'w') as htmlfile:
                 html=markdown.markdown(md.read())
-                print(markdown.markdown(md.read()))
                 htmlfile.write(html)
                 htmlfile.close()
     

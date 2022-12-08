@@ -143,7 +143,7 @@ def main():
         plot_data(df,name,baseloc)
     plot_totalebeztting(totaal,"totaal",baseloc)
     plot_gemiddeldeopeningstijd(dataset,baseloc)
-    plot_table_totaal(dataset,baseloc)
+    #plot_table_totaal(dataset,baseloc)
     plot_table_betalenparking(dataset,baseloc)
     plot_gemiddeldebezetting(dataset,baseloc)
 
