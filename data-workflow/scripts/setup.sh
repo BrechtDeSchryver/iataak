@@ -105,12 +105,22 @@ init(){
     logfile="$SCRIPTDIR/setuplog.txt";
     if ls -1 "$SCRIPTDIR" | grep -x "automated.sh" > /dev/null 2>&1; then
         printf "automated.sh script found in %s\n" "$SCRIPTDIR" > "$logfile";
-    elif ls -1 "$SCRIPTDIR" | grep -x "automated.py"; then
-        printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
-    elif ls -1 "$SCRIPTDIR" | grep -x "raport$g.py"; then
-        printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile"; 
+        if ls -1 "$SCRIPTDIR" | grep -x "automated.py"; then
+            printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
+            if ls -1 "$SCRIPTDIR" | grep -x "raport$g.py"; then
+            printf "automated.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
+            else 
+                printf "raport$g.py script niet gevonden in %s\n" "$SCRIPTDIR";
+                echo "gelieve de juiste script directory mee te geven met het -dir argument of in de setup.sh file"
+                exit 1;
+            fi
+        else 
+            printf "automated.py script niet gevonden in %s\n" "$SCRIPTDIR";
+            echo "gelieve de juiste script directory mee te geven met het -dir argument of in de setup.sh file"
+            exit 1;
+        fi 
     else 
-        printf "automated.sh, automated.py of raport$g.py script niet gevonden in %s\n" "$SCRIPTDIR";
+        printf "automated.sh script niet gevonden in %s\n" "$SCRIPTDIR";
         echo "gelieve de juiste script directory mee te geven met het -dir argument of in de setup.sh file"
         exit 1;
     fi
