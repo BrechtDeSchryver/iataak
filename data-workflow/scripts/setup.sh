@@ -88,11 +88,11 @@ init(){
             shift ;;
             -dir) 
             echo "geef de directory waar de scripts staan: "
-            read SCRIPTDIR
+            read -r SCRIPTDIR
             echo "geef de directory waar de data terecht moet komen: "
-            read DATADIRECTORY
+            read -r DATADIRECTORY
             echo "geef de directory waar de grafieken, tabellen en het rapport terecht moeten komen: "
-            read BASEDIR
+            read -r BASEDIR
             if [ ! -d "$SCRIPTDIR" ] || [ ! -d "$DATADIRECTORY" ] || [ ! -d "$BASEDIR" ]; then
                 echo "directory bestaat niet"
                 exit 69
@@ -104,11 +104,11 @@ init(){
     done
     #maakt een log file aan om alle output van het script in te zetten
     logfile="$SCRIPTDIR/setuplog.txt";
-    if ls -1 "$SCRIPTDIR" | grep -x "automated.sh" > /dev/null 2>&1; then
+    if find "$SCRIPTDIR/automated.sh" > /dev/null 2>&1; then
         printf "automated.sh script found in %s\n" "$SCRIPTDIR" > "$logfile";
-        if ls -1 "$SCRIPTDIR" | grep -x "analyse.py" > /dev/null 2>&1; then
+        if find "$SCRIPTDIR/analyse.py" > /dev/null 2>&1; then
             printf "analyse.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
-            if ls -1 "$SCRIPTDIR" | grep -x "raport$g.py" > /dev/null 2>&1; then
+            if find "$SCRIPTDIR/raport$g.py" > /dev/null 2>&1; then
             printf "raport$g.py script found in %s\n" "$SCRIPTDIR" > "$logfile";
             else 
                 printf "raport$g.py script niet gevonden in %s\n" "$SCRIPTDIR";
