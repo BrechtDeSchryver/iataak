@@ -43,6 +43,8 @@ search(){
     printf "DATADIR = %s/data-%s.json\n" "$DIRECTORY" "$TIMESTAMP">>"$LOGFILE";
     curl -s "$URL" | json_pp >> "$DIRECTORY/data-$TIMESTAMP.json" 2>> "$LOGFILE";
     NEWFILE="$DIRECTORY/data-$TIMESTAMP.json"
+    chmod 0444 "$NEWFILE";
+    chmod 0444 "$LOGFILE";
 }
 #Haalt de data op van de json file en vult deze aan in een csv file.
 fillcsv(){

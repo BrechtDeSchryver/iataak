@@ -29,6 +29,8 @@ search(){
     printf "TIMESTAMP = %s \n" "$TIMESTAMP">>"$LOGFILE";
     printf "DATADIR = %s/data-%s.json\n" "$DIRECTORY" "$TIMESTAMP">>"$LOGFILE";
     curl -s "$URL" | json_pp >> "$DIRECTORY/data-$TIMESTAMP.json" 2>> "$LOGFILE";
+    chmod 0444 "$DIRECTORY/data-$TIMESTAMP.json";
+    chmod 0444 "$LOGFILE";
 }
 #init functie
 #controleerd of de directory bestaat en voert de functies uit
