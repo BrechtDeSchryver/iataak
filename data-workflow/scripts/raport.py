@@ -21,7 +21,7 @@ def aanmakenrapport(baseloc,pagesloc="",pages=False,):
     HTMLLOC= baseloc + "/rapport.html"
     with open(MDLOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
-        f.write('## Dit rapport was gegenereerd op ' + time.strftime("%d/%m/%Y om %H:%M:%S") + '')
+        f.write('## Dit rapport was gegenereerd op ' + time.strftime("%d/%m/%Y om %H:%M:%S") + '\n')
         f.write('### Auteurs:\n')
         f.write(' - [Brecht De Schryver]\n')
         f.write('### Inhoudsopgave:\n')
