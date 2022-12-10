@@ -56,7 +56,7 @@ init(){
         for parking in $parkings
         do  
             #verwijdert de " uit de naam van de parkeergarage
-            newparking=$(echo "$parking" | sed 's/"//g');
+            newparking=${parking//\"/""}
             #controleerd of de csv file van de parkeergarage al bestaat
             if [[ ! -e "$DIRECTORY/csv/$newparking.csv" ]]; then
                 newcsv "$newparking";
