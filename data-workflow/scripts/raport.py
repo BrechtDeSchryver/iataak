@@ -22,7 +22,7 @@ def aanmakenrapport(baseloc,pagesloc="",pages=False,):
     with open(MDLOC, 'w') as f:
         f.write('## Rapport van de IATAAK\n')
         f.write('## Dit rapport was gegenereerd op ' + time.strftime("%d/%m/%Y om %H:%M:%S") + '\n')
-        f.write('### Auteurs:\n')
+        f.write('\n### Auteurs:\n')
         f.write(' - [Brecht De Schryver]\n')
         f.write('### Inhoudsopgave:\n')
         f.write(' - [Inleiding](#inleiding)\n')
