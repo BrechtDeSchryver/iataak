@@ -44,6 +44,7 @@ def plot_gemiddeldebezetting(dataset,baseloc):
     plt.xticks(rotation=90)
     plt.bar(x, y)
     plt.title('gemiddelde bezetting per parking')
+    plt.legend(loc="upper left")
     plt.tight_layout()
     plt.savefig(baseloc+'/csvimage/gemiddelde.csv.png')
 #maakt een graph van de een dataset
