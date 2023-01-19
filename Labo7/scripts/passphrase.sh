@@ -47,6 +47,7 @@ main() {
 generate_passphrase() {
   : # TODO
   passphrase=$(shuf -n "$num_words" "$word_file" | tr '\n' ' ')
+  echo "$passphrase"
 }
 
 # Usage: process_cli_args "${@}"
