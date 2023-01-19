@@ -32,7 +32,7 @@ set -o pipefail
 #---------- Variables ---------------------------------------------
 
 num_words=4
-word_file=/usr/share/dict/words
+word_list=/usr/share/dict/words
 
 #---------- Main function -----------------------------------------
 main() {
@@ -46,7 +46,7 @@ main() {
 # Generates a passphrase with ${num_words} words from ${word_list}
 generate_passphrase() {
   : # TODO
-  passphrase=$(shuf -n "$num_words" "$word_file" | tr '\n' ' ')
+  passphrase=$(shuf -n "$num_words" "$word_list" | tr '\n' ' ')
   echo "$passphrase"
 }
 
