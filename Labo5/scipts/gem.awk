@@ -2,7 +2,6 @@ BEGIN {
     FS=","; # Definieer de komma als scheidingsteken tussen velden
 }
 
-# Voer de volgende actie uit voor elke regel in het bestand
 NR>1 {
     # Voeg de waarde van elke kolom toe aan de juiste som
     sum[3] += $3;
@@ -13,7 +12,7 @@ NR>1 {
     count++; # Tel het aantal regels op
 }
 
-# Voer de volgende actie uit aan het einde van het bestand
+
 END {
     # Bereken het gemiddelde voor elke kolom
     for (i=3; i<=7; i++) {
