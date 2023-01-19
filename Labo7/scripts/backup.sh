@@ -6,7 +6,6 @@ set -o pipefail  # don't hide errors within pipes
 src_dir=$HOME
 dest_dir=/tmp
 
-# check for -h or --help option
 if [ "$1" == "-h" ]  [ "$1" == "-?" ]  [ "$1" == "--help" ]; then
   echo "Usage: backup.sh [OPTIONS] [DIR]"
   echo "Creates a backup of DIR in a Tar-archive compressed with bzip2."
@@ -32,22 +31,18 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-# check if source directory exists
 if [ ! -d "$src_dir" ]; then
   >&2 echo "Error: source directory $src_dir does not exist"
   exit 1
 fi
 
-# check if destination directory exists
 if [ ! -d "$dest_dir" ]; then
   >&2 echo "Error: destination directory $dest_dir does not exist"
   exit 1
 fi
 
-# generate timestamped filename for backup and log file
 timestamp=$(date +%Y%m%d%H%M)
 backup_file="$dest_dir/$(basename "$src_dir")-$timestamp.tar.bz2"
 log_file="$dest_dir/backup-$timestamp.log"
 
-# create backup and log output
 tar cjvf "$backup_file" "$src_dir" &> "$log_file"
