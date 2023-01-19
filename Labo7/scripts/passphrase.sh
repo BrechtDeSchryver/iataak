@@ -69,7 +69,7 @@ for arg in "${@}"; do
 
       # If -h or --help was given, call usage function and exit
       -h|--help)
-        parse_usage
+        usage
         exit 0
         ;;
 
